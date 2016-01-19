@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>EPSignature-EPSignature.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>EPSignature.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-EPSignature_Example.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-EPSignature_Tests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3D2A3D40827417AB70908A8BC030D717</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>57F3D4DD688850A142B933AE10CFC525</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9FCB9E187639778CC7420BD17E8531AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4B849E452EF0491E8820A1949401938</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
