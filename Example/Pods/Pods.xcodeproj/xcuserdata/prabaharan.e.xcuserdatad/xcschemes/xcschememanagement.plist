@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>EPSignature-EPSignature.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>EPSignature.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,17 +22,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>07105C938947535D110091D503F33E9D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3D2A3D40827417AB70908A8BC030D717</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>57F3D4DD688850A142B933AE10CFC525</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9FCB9E187639778CC7420BD17E8531AF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

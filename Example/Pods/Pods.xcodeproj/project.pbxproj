@@ -8,41 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		0BF5BD6534A2ACF73646407F62EE1A05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		2E17B8B63EE799A33569DD35A4208771 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1D2F041251B0A58BA691BD27126469 /* EPExtensions.swift */; };
+		22C622C37415E39C23622B8AB839E441 /* EPSignatureViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 1CE59112541DE1900FAA8215DB0744A7 /* EPSignatureViewController.xib */; };
+		472637E90F89C993C6242352358B051F /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954F6B569D457E5A83E21CC5B6C6BCD6 /* EPExtensions.swift */; };
 		4878A0F5F33AEB43CDA48DC7AB338CE1 /* Pods-EPSignature_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A916F42B5DFA3C3B92E7121E9EB6DFC3 /* Pods-EPSignature_Example-dummy.m */; };
 		49E16E2EE1A67CE83EA5D0AB90862868 /* Pods-EPSignature_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCDBB7E7656C137C08E532EF200030F /* Pods-EPSignature_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B82D201CC8FC1C65C8E0BFA623190CE /* Pods-EPSignature_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE992201E30C28778C6C22E09E10C77D /* Pods-EPSignature_Tests-dummy.m */; };
-		5BD326D7095B216CCF786860AD516530 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		523F998690B930CD8E3E09AAD0D5CEEA /* EPSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F6811C2EFB159B27A8CCB43D07BA5 /* EPSignatureView.swift */; };
 		5BE387D5FE3FB6E0CE8EA8A93DCFDB51 /* Pods-EPSignature_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39EEBCA93D363DC99BF8AEAB77FBC6F3 /* Pods-EPSignature_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5E2A7119DE7163ED3DD1D2C96A8F7758 /* EPSignatureViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2B005BE1E4149B852A287A1CC624FEB5 /* EPSignatureViewController.xib */; };
-		693414898514811957D681E85DC75DE0 /* EPSignature-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6C408C6F13C7756E7ABACF5CFD08B6 /* EPSignature-dummy.m */; };
+		629B79D880E20BCBA416B663EEF94D37 /* EPSignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916BD3F5DDAF53E65FE9D2D078345962 /* EPSignatureViewController.swift */; };
+		68367F5FD19777376703E88B646CEDB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		AD4D0DD9D099D49E381D296E99577D0A /* EPSignature-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B4F0E6E795A4128B1F8328BF85A56A2 /* EPSignature-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AFF7DEABB5641B78BE45E895151E15ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		BE80E8E56C7A85D21E61D5092EDCCDF7 /* EPSignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C4801863CD51B2EBF2DB67FA3165FB /* EPSignatureViewController.swift */; };
-		D0E2163C21D015C5BAB2126164584D23 /* EPSignature-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBB4A423932BA565531738A4B9B9BBF1 /* EPSignature-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DBD96FB93C91C178DF110C8ED37F3BB6 /* EPSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3495289B75DEE3A589D5348208C985 /* EPSignatureView.swift */; };
-		FE8AAE282AA3AFB60BEC34C63A458512 /* EPSignature.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60FBA9515AE60D8F9487E3F327F409AF /* EPSignature.bundle */; };
+		DECB3BD71040B2440D70CDD3B44EE27F /* EPSignature-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA83BB0E0FD16C7BE3A17C2B9FC57ED /* EPSignature-dummy.m */; };
+		EAA1E19DCB81100B2CB725331CAD8669 /* EPSignatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CE59112541DE1900FAA8215DB0744A7 /* EPSignatureViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		04113B5B83380E336888B5469A358148 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9FCB9E187639778CC7420BD17E8531AF;
-			remoteInfo = "EPSignature-EPSignature";
-		};
 		F0DEDB60EDC98980BB4034EB7D6CDEFC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 57F3D4DD688850A142B933AE10CFC525;
+			remoteGlobalIDString = 07105C938947535D110091D503F33E9D;
 			remoteInfo = EPSignature;
 		};
 		F6F4C5568F1E7654F08F033442C67187 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 57F3D4DD688850A142B933AE10CFC525;
+			remoteGlobalIDString = 07105C938947535D110091D503F33E9D;
 			remoteInfo = EPSignature;
 		};
 /* End PBXContainerItemProxy section */
@@ -50,58 +43,42 @@
 /* Begin PBXFileReference section */
 		07F0086E7D0523F917C3D599281B0908 /* Pods-EPSignature_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EPSignature_Example.modulemap"; sourceTree = "<group>"; };
 		0E9A7B1A0A876A5136953730645FDF02 /* Pods-EPSignature_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EPSignature_Tests-resources.sh"; sourceTree = "<group>"; };
-		12BE90E267E3F8E4481BDF9EAD7F8AA2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14A7F7DF54BFC281E2E2FFD458FB9162 /* Pods-EPSignature_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPSignature_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		1CE59112541DE1900FAA8215DB0744A7 /* EPSignatureViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = EPSignatureViewController.xib; sourceTree = "<group>"; };
+		1EB467831DD78C5E6DB686B763932E67 /* EPSignature-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPSignature-prefix.pch"; sourceTree = "<group>"; };
 		222903C4201CAA8E0F7FD2537707BCF2 /* Pods-EPSignature_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EPSignature_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2B005BE1E4149B852A287A1CC624FEB5 /* EPSignatureViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = EPSignatureViewController.xib; sourceTree = "<group>"; };
-		2EE143236DB6665A091D1541B3F9A1E2 /* EPSignature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EPSignature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B4F0E6E795A4128B1F8328BF85A56A2 /* EPSignature-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPSignature-umbrella.h"; sourceTree = "<group>"; };
+		37741C4955FA1CC8E9519A75168808EB /* Pods_EPSignature_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPSignature_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39EEBCA93D363DC99BF8AEAB77FBC6F3 /* Pods-EPSignature_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EPSignature_Tests-umbrella.h"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3FA3911D0C5E575AE255A449236F4E45 /* Pods-EPSignature_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPSignature_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4BCDBB7E7656C137C08E532EF200030F /* Pods-EPSignature_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EPSignature_Example-umbrella.h"; sourceTree = "<group>"; };
+		4DA83BB0E0FD16C7BE3A17C2B9FC57ED /* EPSignature-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EPSignature-dummy.m"; sourceTree = "<group>"; };
+		578F6811C2EFB159B27A8CCB43D07BA5 /* EPSignatureView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EPSignatureView.swift; sourceTree = "<group>"; };
+		59BDF2ADA26B76E8C0FFA256AC4107CD /* EPSignature.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EPSignature.modulemap; sourceTree = "<group>"; };
 		5CC2BE95B193DF21C43DE56F941FF116 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		60FBA9515AE60D8F9487E3F327F409AF /* EPSignature.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPSignature.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B1D2F041251B0A58BA691BD27126469 /* EPExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EPExtensions.swift; sourceTree = "<group>"; };
-		6CFC09E9931D201104AEE408A8F68FA1 /* Pods_EPSignature_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPSignature_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A939CAE5C4421067D898B274F4A9F1 /* Pods-EPSignature_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EPSignature_Example-resources.sh"; sourceTree = "<group>"; };
 		79FDD1B3EBE1AAADE32481ADD9835BAA /* Pods-EPSignature_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPSignature_Example.release.xcconfig"; sourceTree = "<group>"; };
-		7E38B6E7232018F2A2D39BE69CAD82D6 /* EPSignature.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EPSignature.xcconfig; sourceTree = "<group>"; };
+		7BF11AD42EAA75A8DE43004A4D9B4053 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86B2FB548DFF1666B8BB9267769B1431 /* Pods-EPSignature_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EPSignature_Tests.modulemap"; sourceTree = "<group>"; };
 		878FC73705C55E9C45955C772ACB83B2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		916BD3F5DDAF53E65FE9D2D078345962 /* EPSignatureViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EPSignatureViewController.swift; sourceTree = "<group>"; };
+		954F6B569D457E5A83E21CC5B6C6BCD6 /* EPExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EPExtensions.swift; sourceTree = "<group>"; };
 		9B1C5AABF61E68BAEB0F17EE3B9CBBFA /* Pods-EPSignature_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EPSignature_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		A2CEACFDE994053DAE4725BA0D20BFAF /* Pods_EPSignature_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPSignature_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8188CCBA67A5707137EC7D724E49BB8 /* Pods-EPSignature_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPSignature_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A916F42B5DFA3C3B92E7121E9EB6DFC3 /* Pods-EPSignature_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EPSignature_Example-dummy.m"; sourceTree = "<group>"; };
-		AE3495289B75DEE3A589D5348208C985 /* EPSignatureView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EPSignatureView.swift; sourceTree = "<group>"; };
-		BA02C38DE01FF4345B4C7561CB1DC1F8 /* EPSignature-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPSignature-prefix.pch"; sourceTree = "<group>"; };
+		ABF4C8DBAB4B2F4B3B0C755B7A3DF847 /* EPSignature.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EPSignature.xcconfig; sourceTree = "<group>"; };
+		B0185F32243D72E9A14FF6F87750EB53 /* EPSignature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EPSignature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C226B3BFA9A87DFCDB33AF9F8C301C59 /* Pods-EPSignature_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EPSignature_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CD6C408C6F13C7756E7ABACF5CFD08B6 /* EPSignature-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EPSignature-dummy.m"; sourceTree = "<group>"; };
+		CD1FAF0D61B2B2625A7CAF3C343F9CEC /* Pods_EPSignature_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPSignature_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D21481A60E84A8D542B4563EC172B495 /* Pods-EPSignature_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPSignature_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D3A160148F7027DBF900F020B29532A4 /* Pods-EPSignature_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPSignature_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D6C4801863CD51B2EBF2DB67FA3165FB /* EPSignatureViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EPSignatureViewController.swift; sourceTree = "<group>"; };
-		DBB4A423932BA565531738A4B9B9BBF1 /* EPSignature-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPSignature-umbrella.h"; sourceTree = "<group>"; };
-		DC662495B1B5ED915B0AF7BD06A28E1C /* EPSignature.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EPSignature.modulemap; sourceTree = "<group>"; };
 		E48C66FACAC7D7BB3CE5E7C504C31F4D /* Pods-EPSignature_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EPSignature_Example-frameworks.sh"; sourceTree = "<group>"; };
 		EE992201E30C28778C6C22E09E10C77D /* Pods-EPSignature_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EPSignature_Tests-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3C10347B4F114CEA044330E64A6FD047 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		67A10BEEE681A494FCFD4FB854C6B99C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5BD326D7095B216CCF786860AD516530 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		78FD044DB93025C17191782F40A95DD4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +92,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BF5BD6534A2ACF73646407F62EE1A05 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3065D816BC74C1B8473A1A2CCBAD4D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68367F5FD19777376703E88B646CEDB0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,52 +133,76 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2DFC4D549C583E863AC723CC109D0B82 /* Pod */ = {
+		2F24C16F5B2B43C44694920C803E6BB6 /* EPSignature */ = {
 			isa = PBXGroup;
 			children = (
-				38A073F5719AF00E6D86B1335184A2C3 /* Classes */,
+				AA2D87BC0DD7091DC6E62CAE7A2731D5 /* Pod */,
+				4E4E05E5E9A13CADBA06334626043BAC /* Resources */,
+				DF22FCA8FC7FFA18219CFE11BCE30B30 /* Support Files */,
+			);
+			name = EPSignature;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		448A66456D44CBFFE6876B0508D73B5F /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				6A81AEDC6DE6B16EAB9892A418A69510 /* Classes */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
 		};
-		38A073F5719AF00E6D86B1335184A2C3 /* Classes */ = {
+		4E4E05E5E9A13CADBA06334626043BAC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6B1D2F041251B0A58BA691BD27126469 /* EPExtensions.swift */,
-				AE3495289B75DEE3A589D5348208C985 /* EPSignatureView.swift */,
-				D6C4801863CD51B2EBF2DB67FA3165FB /* EPSignatureViewController.swift */,
-				2B005BE1E4149B852A287A1CC624FEB5 /* EPSignatureViewController.xib */,
+				448A66456D44CBFFE6876B0508D73B5F /* Pod */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6910E45DDA9EDFD7C28E3AEB17476B8F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				954F6B569D457E5A83E21CC5B6C6BCD6 /* EPExtensions.swift */,
+				578F6811C2EFB159B27A8CCB43D07BA5 /* EPSignatureView.swift */,
+				916BD3F5DDAF53E65FE9D2D078345962 /* EPSignatureViewController.swift */,
+				1CE59112541DE1900FAA8215DB0744A7 /* EPSignatureViewController.xib */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		6A81AEDC6DE6B16EAB9892A418A69510 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7271EB15942A02D33AC42B1EF1529C55 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F24C16F5B2B43C44694920C803E6BB6 /* EPSignature */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				83F79A40EE63624C9A66622D43592109 /* Development Pods */,
+				7271EB15942A02D33AC42B1EF1529C55 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				F026E77830F1F544A9172C0819B87736 /* Products */,
+				D5FF5B3CCB7C88762F2981C05F1FAF7C /* Products */,
 				2275F443EC252112C60896D3B4FEAD34 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		83F79A40EE63624C9A66622D43592109 /* Development Pods */ = {
+		AA2D87BC0DD7091DC6E62CAE7A2731D5 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				AEA8B8EB2BFDE18A45D0188438A27ADE /* EPSignature */,
+				6910E45DDA9EDFD7C28E3AEB17476B8F /* Classes */,
 			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		AEA8B8EB2BFDE18A45D0188438A27ADE /* EPSignature */ = {
-			isa = PBXGroup;
-			children = (
-				2DFC4D549C583E863AC723CC109D0B82 /* Pod */,
-				DEA22FA213C3F6FE3B739630A3E0FE79 /* Support Files */,
-			);
-			name = EPSignature;
-			path = ../..;
+			path = Pod;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -212,15 +221,25 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		DEA22FA213C3F6FE3B739630A3E0FE79 /* Support Files */ = {
+		D5FF5B3CCB7C88762F2981C05F1FAF7C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC662495B1B5ED915B0AF7BD06A28E1C /* EPSignature.modulemap */,
-				7E38B6E7232018F2A2D39BE69CAD82D6 /* EPSignature.xcconfig */,
-				CD6C408C6F13C7756E7ABACF5CFD08B6 /* EPSignature-dummy.m */,
-				BA02C38DE01FF4345B4C7561CB1DC1F8 /* EPSignature-prefix.pch */,
-				DBB4A423932BA565531738A4B9B9BBF1 /* EPSignature-umbrella.h */,
-				12BE90E267E3F8E4481BDF9EAD7F8AA2 /* Info.plist */,
+				B0185F32243D72E9A14FF6F87750EB53 /* EPSignature.framework */,
+				CD1FAF0D61B2B2625A7CAF3C343F9CEC /* Pods_EPSignature_Example.framework */,
+				37741C4955FA1CC8E9519A75168808EB /* Pods_EPSignature_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF22FCA8FC7FFA18219CFE11BCE30B30 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				59BDF2ADA26B76E8C0FFA256AC4107CD /* EPSignature.modulemap */,
+				ABF4C8DBAB4B2F4B3B0C755B7A3DF847 /* EPSignature.xcconfig */,
+				4DA83BB0E0FD16C7BE3A17C2B9FC57ED /* EPSignature-dummy.m */,
+				1EB467831DD78C5E6DB686B763932E67 /* EPSignature-prefix.pch */,
+				2B4F0E6E795A4128B1F8328BF85A56A2 /* EPSignature-umbrella.h */,
+				7BF11AD42EAA75A8DE43004A4D9B4053 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/EPSignature";
@@ -244,17 +263,6 @@
 			path = "Target Support Files/Pods-EPSignature_Example";
 			sourceTree = "<group>";
 		};
-		F026E77830F1F544A9172C0819B87736 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				60FBA9515AE60D8F9487E3F327F409AF /* EPSignature.bundle */,
-				2EE143236DB6665A091D1541B3F9A1E2 /* EPSignature.framework */,
-				6CFC09E9931D201104AEE408A8F68FA1 /* Pods_EPSignature_Example.framework */,
-				A2CEACFDE994053DAE4725BA0D20BFAF /* Pods_EPSignature_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -266,14 +274,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		904534C6D27ECE7669FC96E24F6E16EE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D0E2163C21D015C5BAB2126164584D23 /* EPSignature-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AFB95EA6DA70DDB3F362F81B08B321B6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,9 +282,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BAEAD87C96D4BC3034DBD74E42AD9297 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD4D0DD9D099D49E381D296E99577D0A /* EPSignature-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		07105C938947535D110091D503F33E9D /* EPSignature */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59C8F20557590F0E862064A77C9DF508 /* Build configuration list for PBXNativeTarget "EPSignature" */;
+			buildPhases = (
+				0B7A8ED43FE125F46920956F53193EA3 /* Sources */,
+				E3065D816BC74C1B8473A1A2CCBAD4D6 /* Frameworks */,
+				0016FE4EAC4CA19E56F3FAC4C6ECA4A4 /* Resources */,
+				BAEAD87C96D4BC3034DBD74E42AD9297 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EPSignature;
+			productName = EPSignature;
+			productReference = B0185F32243D72E9A14FF6F87750EB53 /* EPSignature.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		3D2A3D40827417AB70908A8BC030D717 /* Pods-EPSignature_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98D64EF010EC722254378B9C19F42316 /* Build configuration list for PBXNativeTarget "Pods-EPSignature_Example" */;
@@ -300,44 +326,8 @@
 			);
 			name = "Pods-EPSignature_Example";
 			productName = "Pods-EPSignature_Example";
-			productReference = 6CFC09E9931D201104AEE408A8F68FA1 /* Pods_EPSignature_Example.framework */;
+			productReference = CD1FAF0D61B2B2625A7CAF3C343F9CEC /* Pods_EPSignature_Example.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		57F3D4DD688850A142B933AE10CFC525 /* EPSignature */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E6556ADCFEDD9034A674DF1AA417BF98 /* Build configuration list for PBXNativeTarget "EPSignature" */;
-			buildPhases = (
-				5CB2B61AC8BB37EA013977376F27DEA3 /* Sources */,
-				67A10BEEE681A494FCFD4FB854C6B99C /* Frameworks */,
-				4D04A97A6235FEDD19C0A319FA348A08 /* Resources */,
-				904534C6D27ECE7669FC96E24F6E16EE /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1DFDD713F03F0D1BE9B080271F9D1643 /* PBXTargetDependency */,
-			);
-			name = EPSignature;
-			productName = EPSignature;
-			productReference = 2EE143236DB6665A091D1541B3F9A1E2 /* EPSignature.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		9FCB9E187639778CC7420BD17E8531AF /* EPSignature-EPSignature */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FE6E11F9C87AF1CFF39AFBBC7F7FE7F2 /* Build configuration list for PBXNativeTarget "EPSignature-EPSignature" */;
-			buildPhases = (
-				69C739FE27F80A4CA743975F719CF0C9 /* Sources */,
-				3C10347B4F114CEA044330E64A6FD047 /* Frameworks */,
-				7F6F93436512203750035AF0A3E50CEA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "EPSignature-EPSignature";
-			productName = "EPSignature-EPSignature";
-			productReference = 60FBA9515AE60D8F9487E3F327F409AF /* EPSignature.bundle */;
-			productType = "com.apple.product-type.bundle";
 		};
 		E4B849E452EF0491E8820A1949401938 /* Pods-EPSignature_Tests */ = {
 			isa = PBXNativeTarget;
@@ -354,7 +344,7 @@
 			);
 			name = "Pods-EPSignature_Tests";
 			productName = "Pods-EPSignature_Tests";
-			productReference = A2CEACFDE994053DAE4725BA0D20BFAF /* Pods_EPSignature_Tests.framework */;
+			productReference = 37741C4955FA1CC8E9519A75168808EB /* Pods_EPSignature_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -364,7 +354,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -374,12 +364,11 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F026E77830F1F544A9172C0819B87736 /* Products */;
+			productRefGroup = D5FF5B3CCB7C88762F2981C05F1FAF7C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				57F3D4DD688850A142B933AE10CFC525 /* EPSignature */,
-				9FCB9E187639778CC7420BD17E8531AF /* EPSignature-EPSignature */,
+				07105C938947535D110091D503F33E9D /* EPSignature */,
 				3D2A3D40827417AB70908A8BC030D717 /* Pods-EPSignature_Example */,
 				E4B849E452EF0491E8820A1949401938 /* Pods-EPSignature_Tests */,
 			);
@@ -387,40 +376,26 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4D04A97A6235FEDD19C0A319FA348A08 /* Resources */ = {
+		0016FE4EAC4CA19E56F3FAC4C6ECA4A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE8AAE282AA3AFB60BEC34C63A458512 /* EPSignature.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7F6F93436512203750035AF0A3E50CEA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				EAA1E19DCB81100B2CB725331CAD8669 /* EPSignatureViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5CB2B61AC8BB37EA013977376F27DEA3 /* Sources */ = {
+		0B7A8ED43FE125F46920956F53193EA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E17B8B63EE799A33569DD35A4208771 /* EPExtensions.swift in Sources */,
-				693414898514811957D681E85DC75DE0 /* EPSignature-dummy.m in Sources */,
-				DBD96FB93C91C178DF110C8ED37F3BB6 /* EPSignatureView.swift in Sources */,
-				BE80E8E56C7A85D21E61D5092EDCCDF7 /* EPSignatureViewController.swift in Sources */,
-				5E2A7119DE7163ED3DD1D2C96A8F7758 /* EPSignatureViewController.xib in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		69C739FE27F80A4CA743975F719CF0C9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				472637E90F89C993C6242352358B051F /* EPExtensions.swift in Sources */,
+				DECB3BD71040B2440D70CDD3B44EE27F /* EPSignature-dummy.m in Sources */,
+				523F998690B930CD8E3E09AAD0D5CEEA /* EPSignatureView.swift in Sources */,
+				629B79D880E20BCBA416B663EEF94D37 /* EPSignatureViewController.swift in Sources */,
+				22C622C37415E39C23622B8AB839E441 /* EPSignatureViewController.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,22 +418,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1DFDD713F03F0D1BE9B080271F9D1643 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "EPSignature-EPSignature";
-			target = 9FCB9E187639778CC7420BD17E8531AF /* EPSignature-EPSignature */;
-			targetProxy = 04113B5B83380E336888B5469A358148 /* PBXContainerItemProxy */;
-		};
 		CF6651F7AE662D3C91AF61701EB5FD18 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EPSignature;
-			target = 57F3D4DD688850A142B933AE10CFC525 /* EPSignature */;
+			target = 07105C938947535D110091D503F33E9D /* EPSignature */;
 			targetProxy = F6F4C5568F1E7654F08F033442C67187 /* PBXContainerItemProxy */;
 		};
 		EDC26067E5B29429FABB7CC2B28ABDB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EPSignature;
-			target = 57F3D4DD688850A142B933AE10CFC525 /* EPSignature */;
+			target = 07105C938947535D110091D503F33E9D /* EPSignature */;
 			targetProxy = F0DEDB60EDC98980BB4034EB7D6CDEFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -485,7 +454,6 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_EPSignature_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -529,9 +497,9 @@
 			};
 			name = Release;
 		};
-		20D8A3A25F1DBEBF3BF5D8A050364DC1 /* Release */ = {
+		4783945190FC6244B2C9D914EB955D27 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E38B6E7232018F2A2D39BE69CAD82D6 /* EPSignature.xcconfig */;
+			baseConfigurationReference = ABF4C8DBAB4B2F4B3B0C755B7A3DF847 /* EPSignature.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -547,7 +515,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/EPSignature/EPSignature.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = EPSignature;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -575,7 +542,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -597,21 +563,9 @@
 			};
 			name = Debug;
 		};
-		A01B68C75F72A27F5307DAC1D797353C /* Release */ = {
+		A8FE7B004012D0CABBE2A3BB208AB9AF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E38B6E7232018F2A2D39BE69CAD82D6 /* EPSignature.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = EPSignature;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		A9161E30D80FEE42F63EFDA6ED15B675 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E38B6E7232018F2A2D39BE69CAD82D6 /* EPSignature.xcconfig */;
+			baseConfigurationReference = ABF4C8DBAB4B2F4B3B0C755B7A3DF847 /* EPSignature.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -627,7 +581,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/EPSignature/EPSignature.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = EPSignature;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -659,7 +612,6 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_EPSignature_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -690,7 +642,6 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_EPSignature_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -698,18 +649,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		ED2F47DA7AFC6ABAE5166858E703152A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E38B6E7232018F2A2D39BE69CAD82D6 /* EPSignature.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = EPSignature;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -734,7 +673,6 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_EPSignature_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -757,6 +695,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		59C8F20557590F0E862064A77C9DF508 /* Build configuration list for PBXNativeTarget "EPSignature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8FE7B004012D0CABBE2A3BB208AB9AF /* Debug */,
+				4783945190FC6244B2C9D914EB955D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6B506CCC37B9CAECA5674D8011AD9A4B /* Build configuration list for PBXNativeTarget "Pods-EPSignature_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -771,24 +718,6 @@
 			buildConfigurations = (
 				F64514CD8890624F7E2433A70C0285F9 /* Debug */,
 				08B71E9E31BF075DBDDCB67FF85DAD2D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E6556ADCFEDD9034A674DF1AA417BF98 /* Build configuration list for PBXNativeTarget "EPSignature" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A9161E30D80FEE42F63EFDA6ED15B675 /* Debug */,
-				20D8A3A25F1DBEBF3BF5D8A050364DC1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FE6E11F9C87AF1CFF39AFBBC7F7FE7F2 /* Build configuration list for PBXNativeTarget "EPSignature-EPSignature" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ED2F47DA7AFC6ABAE5166858E703152A /* Debug */,
-				A01B68C75F72A27F5307DAC1D797353C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

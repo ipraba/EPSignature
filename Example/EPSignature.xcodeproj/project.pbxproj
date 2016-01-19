@@ -47,6 +47,7 @@
 		9505CA2A7C08D1FAE19D88BE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F4610E921C4E435800D093B5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4610E931C4E435800D093B5 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		F4670B2D1C4E58810093CD0F /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		FCA533009FE604848E395F85 /* Pods-EPSignature_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EPSignature_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EPSignature_Example/Pods-EPSignature_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +137,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				F4670B2D1C4E58810093CD0F /* .travis.yml */,
 				80B384D2F1FB9E801E17B03E /* EPSignature.podspec */,
 				9505CA2A7C08D1FAE19D88BE /* README.md */,
 				1A2C351F6862054EE1849CD1 /* LICENSE */,
