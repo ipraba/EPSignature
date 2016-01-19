@@ -1,8 +1,9 @@
 # EPSignature
 
+[![Swift 2.0](https://img.shields.io/badge/Swift-2.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![CI Status](http://img.shields.io/travis/Prabaharan/EPSignature.svg?style=flat)](https://travis-ci.org/Prabaharan/EPSignature)
 [![Version](https://img.shields.io/cocoapods/v/EPSignature.svg?style=flat)](http://cocoapods.org/pods/EPSignature)
-[![License](https://img.shields.io/cocoapods/l/EPSignature.svg?style=flat)](http://cocoapods.org/pods/EPSignature)
+[![License](https://img.shields.io/cocoapods/l/EPSignature.svg?style=flat)](https://github.com/ipraba/EPSignature/blob/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/EPSignature.svg?style=flat)](http://cocoapods.org/pods/EPSignature)
 
 ## Preview
@@ -17,6 +18,10 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "EPSignature"
 ```
+#### Manual Installation
+
+Just drag and drop the files in `Pod/Classes` folder into your project
+
 
 ## Features
 
