@@ -1,3 +1,7 @@
+<p align="center" >
+  <img src="Screenshots/logo.png" alt="EPSignature" title="EPSignature" width="196">
+</p>
+
 # EPSignature
 
 Signature component for iOS written in Swift
@@ -53,7 +57,7 @@ Properties | Description
 **`showsSaveSignatureOption`**|`Bool value that allows the user to save the signature for future use`
 **`signatureDelegate`**|`Delegate listing for events`
 **`subtitleText`**|`Subtitle text for signature(Eg: Sign here)`
-**`tintColor`**|`nt color for the view controller. Applies for barbuttons, switches and actionsheet`
+**`tintColor`**|`Tint color for the view controller. Applies for barbuttons, switches and actionsheet`
 
 ### Properties of EPSignatureView
 
