@@ -1,0 +1,25 @@
+{
+  "name": "EPSignature",
+  "version": "0.1.0",
+  "summary": "A short description of EPSignature.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/EPSignature",
+  "license": "MIT",
+  "authors": {
+    "Prabaharan": "prabaharan.e@payoda.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/EPSignature.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "EPSignature": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
