@@ -5,11 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/EPSignature.svg?style=flat)](http://cocoapods.org/pods/EPSignature)
 [![Platform](https://img.shields.io/cocoapods/p/EPSignature.svg?style=flat)](http://cocoapods.org/pods/EPSignature)
 
-## Usage
+## Preview
+![Screenshot](https://raw.githubusercontent.com/ipraba/EPSignature/master/Screenshots/iPhone.png)    ![Screenshot](https://raw.githubusercontent.com/ipraba/EPSignature/master/Screenshots/iPad.png)
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
@@ -32,10 +30,6 @@ pod "EPSignature"
 8. Draws smoothly
 
 
-## Author
-
-Prabaharan, mailprabaharan.e@gmail.com
-
 ## License
 
-EPSignature is available under the MIT license. See the LICENSE file for more info.
+EPSignature is available under the MIT license. See the LICENSE(https://github.com/ipraba/EPSignature/blob/master/LICENSE) file for more info.
