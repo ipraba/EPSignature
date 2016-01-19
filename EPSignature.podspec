@@ -1,40 +1,27 @@
-#
-# Be sure to run `pod lib lint EPSignature.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
 
 Pod::Spec.new do |s|
   s.name             = "EPSignature"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of EPSignature."
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
+  s.version          = "1.0.1"
+  s.summary          = "Signature component for iOS in Swift"
   s.description      = <<-DESC
-                       DESC
-
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/EPSignature"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+Features
+1. User can draw the signature either by finger or by apple pencil
+2. Ability to save the signature as default signature
+3. Ability to load the saved signature
+4. Works on both orientations(portrait and landscape)
+5. Works on both iPhone and iPad
+6. Also can be embedded in any container view
+7. Can extract the signature as Image
+8. Draws smoothly
+DESC
+  s.homepage         = "https://github.com/ipraba/EPSignature"
   s.license          = 'MIT'
-  s.author           = { "Prabaharan" => "prabaharan.e@payoda.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/EPSignature.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { "Prabaharan" => "mailprabaharan.e@gmail.com" }
+  s.source           = { :git => "https://github.com/ipraba/EPSignature.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'EPSignature' => ['Pod/Assets/*.png']
-  }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.resources        = ["Pod/Classes/EPSignatureViewController.xib"]
 end
