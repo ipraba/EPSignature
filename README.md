@@ -6,11 +6,12 @@
 
 Signature component for iOS written in Swift
 
+[![Platform](https://img.shields.io/cocoapods/p/EPSignature.svg?style=flat)](http://cocoapods.org/pods/EPSignature)
 [![Swift 2.0](https://img.shields.io/badge/Swift-2.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![CI Status](https://travis-ci.org/ipraba/EPSignature.svg?branch=master)](https://travis-ci.org/ipraba/EPSignature)
 [![Version](https://img.shields.io/cocoapods/v/EPSignature.svg?style=flat)](http://cocoapods.org/pods/EPSignature)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/EPSignature.svg?style=flat)](https://github.com/ipraba/EPSignature/blob/master/LICENSE)
-[![Platform](https://img.shields.io/cocoapods/p/EPSignature.svg?style=flat)](http://cocoapods.org/pods/EPSignature)
 
 ### Preview
 ![Screenshot](https://raw.githubusercontent.com/ipraba/EPSignature/master/Screenshots/iPhone.png)    ![Screenshot](https://raw.githubusercontent.com/ipraba/EPSignature/master/Screenshots/iPad.png)
@@ -18,20 +19,28 @@ Signature component for iOS written in Swift
 
 ### Installation
 
-EPSignature is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+##### [Cocoapods](http://cocoapods.org)
 
+EPSignature is available through CocoaPods. To install it, simply add the following line to your Podfile:
 ```ruby
 pod "EPSignature"
 ```
-#### Manual Installation
+
+##### [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios)
+
+To integrate EPSignature into your Xcode project using Carthage, specify it in your Cartfile:
+```ruby
+github "ipraba/EPSignature"
+```
+
+##### Manual Installation
 
 Just drag and drop the files in `Pod/Classes` folder into your project
 
-### Features
+#### Features
 
 1. User can draw the signature either by finger or by apple pencil
-2. Ability to save the signature as default signature. Which can be retrieved later
+2. Ability to save the signature as default signature which can be retrieved later
 3. Ability to load the saved signature
 4. Works on both orientations(portrait and landscape)
 5. Works on both iPhone and iPad devices
@@ -55,7 +64,7 @@ Properties | Description
 ---- | ---------
 **`showsDate`**|`Bool value that allows to show the date while signing`
 **`showsSaveSignatureOption`**|`Bool value that allows the user to save the signature for future use`
-**`signatureDelegate`**|`Delegate listing for events`
+**`signatureDelegate`**|`Delegate listening for events`
 **`subtitleText`**|`Subtitle text for signature(Eg: Sign here)`
 **`tintColor`**|`Tint color for the view controller. Applies for barbuttons, switches and actionsheet`
 
@@ -71,6 +80,8 @@ Properties | Description
 
      func epSignature(_: EPSignature.EPSignatureViewController, didCancel error: NSError)
      func epSignature(_: EPSignature.EPSignatureViewController, didSigned signatureImage: UIImage, boundingRect: CGRect)
+     
+Note: boundingRect will contain the bounds of the signed image retrieved. Crop using htis rect to make shorter and small signature images
 
 ### License
 
