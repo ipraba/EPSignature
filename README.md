@@ -11,7 +11,7 @@ Signature component for iOS written in Swift
 [![CI Status](https://travis-ci.org/ipraba/EPSignature.svg?branch=master)](https://travis-ci.org/ipraba/EPSignature)
 [![Version](https://img.shields.io/cocoapods/v/EPSignature.svg?style=flat)](https://cocoapods.org/?q=EPsignature)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![License](https://img.shields.io/cocoapods/l/EPSignature.svg?style=flat)](https://github.com/ipraba/EPSignature/blob/master/LICENSE)
+[![License](http://img.shields.io/badge/license-MIT-33e0ff.svg)](https://github.com/ipraba/EPSignature/blob/master/LICENSE)
 
 ### Preview
 ![Screenshot](https://raw.githubusercontent.com/ipraba/EPSignature/master/Screenshots/iPhone.png)    ![Screenshot](https://raw.githubusercontent.com/ipraba/EPSignature/master/Screenshots/iPad.png)
@@ -91,4 +91,3 @@ EPSignature is available under the MIT license. See the [LICENSE](https://github
 
 [@ipraba](https://github.com/ipraba)
 
-Contributions are welcomed :]
