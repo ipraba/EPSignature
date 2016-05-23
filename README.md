@@ -50,12 +50,13 @@ Just drag and drop the files in `Pod/Classes` folder into your project
 8. Draws smoothly
 
 ### Initialization of EPSignatureViewController
-
-    let signatureVC = EPSignatureViewController(signatureDelegate: self, showsDate: true, showsSaveSignatureOption: true)
-    signatureVC.subtitleText = "I agree to the terms and conditions"
-    signatureVC.title = "John Doe"
-    let nav = UINavigationController(rootViewController: signatureVC)
-    presentViewController(nav, animated: true, completion: nil)
+```swift
+let signatureVC = EPSignatureViewController(signatureDelegate: self, showsDate: true, showsSaveSignatureOption: true)
+signatureVC.subtitleText = "I agree to the terms and conditions"
+signatureVC.title = "John Doe"
+let nav = UINavigationController(rootViewController: signatureVC)
+presentViewController(nav, animated: true, completion: nil)
+```
 
 Note: You can also embed the signature view in any one of the container using the EPSignatureView
 
@@ -78,10 +79,11 @@ Properties | Description
 **`isSigned`**|`Bool value checks whether the user has signed or not`
 
 ### EPSignatureViewController Delegates
+```swift
+func epSignature(_: EPSignature.EPSignatureViewController, didCancel error: NSError)
+func epSignature(_: EPSignature.EPSignatureViewController, didSigned signatureImage: UIImage, boundingRect: CGRect)
+```
 
-     func epSignature(_: EPSignature.EPSignatureViewController, didCancel error: NSError)
-     func epSignature(_: EPSignature.EPSignatureViewController, didSigned signatureImage: UIImage, boundingRect: CGRect)
-     
 Note: boundingRect will contain the bounds of the signed image retrieved. Crop using this rect to make shorter and small signature images
 
 ### License
