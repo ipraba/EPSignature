@@ -28,6 +28,7 @@ public class EPSignatureView: UIView {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.backgroundColor = .clearColor()
         bezierPath.lineWidth = strokeWidth
         addLongPressGesture()
         minPoint = CGPointMake(self.frame.size.width,self.frame.size.height)
@@ -35,6 +36,7 @@ public class EPSignatureView: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .clearColor()
         bezierPath.lineWidth = strokeWidth
         addLongPressGesture()
         minPoint = CGPointMake(self.frame.size.width,self.frame.size.height)
