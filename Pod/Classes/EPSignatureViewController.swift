@@ -30,7 +30,7 @@ public class EPSignatureViewController: UIViewController {
     
     public var showsDate: Bool = true
     public var showsSaveSignatureOption: Bool = true
-    public var signatureDelegate: EPSignatureDelegate
+    public weak var signatureDelegate: EPSignatureDelegate?
     public var subtitleText = "Sign Here"
     public var tintColor = UIColor.defaultTintColor()
 
@@ -101,7 +101,7 @@ public class EPSignatureViewController: UIViewController {
     // MARK: - Button Actions
     
     func onTouchCancelButton() {
-        signatureDelegate.epSignature!(self, didCancel: NSError(domain: "EPSignatureDomain", code: 1, userInfo: [NSLocalizedDescriptionKey:"User not signed"]))
+        signatureDelegate?.epSignature!(self, didCancel: NSError(domain: "EPSignatureDomain", code: 1, userInfo: [NSLocalizedDescriptionKey:"User not signed"]))
         dismissViewControllerAnimated(true, completion: nil)
     }
 
@@ -112,7 +112,7 @@ public class EPSignatureViewController: UIViewController {
                 let filePath = (docPath! as NSString).stringByAppendingPathComponent("sig.data")
                 signatureView.saveSignature(filePath)
             }
-            signatureDelegate.epSignature!(self, didSigned: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
+            signatureDelegate?.epSignature!(self, didSigned: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
             dismissViewControllerAnimated(true, completion: nil)
         } else {
             showAlert("You did not sign", andTitle: "Please draw your signature")
