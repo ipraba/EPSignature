@@ -28,13 +28,18 @@ public class EPSignatureView: UIView {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        bezierPath.lineWidth = strokeWidth
-        addLongPressGesture()
-        minPoint = CGPointMake(self.frame.size.width,self.frame.size.height)
+        
+        self.initialize()
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        self.initialize()
+    }
+    
+    private func initialize() {
+        self.backgroundColor = .clearColor()
         bezierPath.lineWidth = strokeWidth
         addLongPressGesture()
         minPoint = CGPointMake(self.frame.size.width,self.frame.size.height)
@@ -52,7 +57,7 @@ public class EPSignatureView: UIView {
     
     func addLongPressGesture() {
         //Long press gesture is used to keep clear dots in the canvas
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: "longPressed:")
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(EPSignatureView.longPressed(_:)))
         longPressGesture.minimumPressDuration = 1.5
         self.addGestureRecognizer(longPressGesture)
     }
@@ -76,7 +81,7 @@ public class EPSignatureView: UIView {
     
     override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let currentPoint = touchPoint(touches) {
-            bezierCounter++
+            bezierCounter += 1
             bezierPoints[bezierCounter] = currentPoint
 
             //Smoothing is done by Bezier Equations where curves are calculated based on four concurrent  points drawn
