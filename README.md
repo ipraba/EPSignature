@@ -20,7 +20,7 @@ Signature component for iOS written in Swift
 
 ### Installation
 
-##### [Cocoapods](http://cocoapods.org)
+##### [CocoaPods](http://cocoapods.org)
 
 EPSignature is available through CocoaPods. To install it, simply add the following line to your Podfile:
 ```ruby
