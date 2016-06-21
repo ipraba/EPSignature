@@ -8,7 +8,7 @@ before_install:
 - xcodebuild -version
 script:
 - DESTINATION="-destination \"platform=iOS Simulator,name=iPhone 6s,OS=latest\""
-- COMMAND="xcodebuild -project \"$TRAVIS_XCODE_PROJECT\" -scheme \"$TRAVIS_XCODE_SCHEME\" $DESTINATION"
+- COMMAND="xcodebuild -workspace \"$TRAVIS_XCODE_WORKSPACE\" -scheme \"$TRAVIS_XCODE_SCHEME\" $DESTINATION"
 - eval $COMMAND clean build &>/dev/null
 - set -o pipefail
 - eval $COMMAND test | xcpretty
