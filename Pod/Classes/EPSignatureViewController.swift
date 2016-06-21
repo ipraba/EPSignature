@@ -11,7 +11,7 @@ import UIKit
     // MARK: - EPSignatureDelegate
 @objc public protocol EPSignatureDelegate {
     optional    func epSignature(_: EPSignatureViewController, didCancel error : NSError)
-    optional    func epSignature(_: EPSignatureViewController, didSigned signatureImage : UIImage, boundingRect: CGRect)
+    optional    func epSignature(_: EPSignatureViewController, didSign signatureImage : UIImage, boundingRect: CGRect)
 }
 
 public class EPSignatureViewController: UIViewController {
@@ -39,13 +39,13 @@ public class EPSignatureViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-        let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "onTouchCancelButton")
+        let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: #selector(EPSignatureViewController.onTouchCancelButton))
         cancelButton.tintColor = tintColor
         self.navigationItem.leftBarButtonItem = cancelButton
         
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "onTouchDoneButton")
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: #selector(EPSignatureViewController.onTouchDoneButton))
         doneButton.tintColor = tintColor
-        let clearButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Trash, target: self, action: "onTouchClearButton")
+        let clearButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Trash, target: self, action: #selector(EPSignatureViewController.onTouchClearButton))
         clearButton.tintColor = tintColor
         
         if showsDate {
@@ -57,7 +57,7 @@ public class EPSignatureViewController: UIViewController {
         }
         
         if showsSaveSignatureOption {
-            let actionButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target:   self, action: "onTouchActionButton:")
+            let actionButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target:   self, action: #selector(EPSignatureViewController.onTouchActionButton(_:)))
             actionButton.tintColor = tintColor
             self.navigationItem.rightBarButtonItems = [doneButton, clearButton, actionButton]
             switchSaveSignature.onTintColor = tintColor
@@ -112,7 +112,7 @@ public class EPSignatureViewController: UIViewController {
                 let filePath = (docPath! as NSString).stringByAppendingPathComponent("sig.data")
                 signatureView.saveSignature(filePath)
             }
-            signatureDelegate?.epSignature!(self, didSigned: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
+            signatureDelegate?.epSignature!(self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
             dismissViewControllerAnimated(true, completion: nil)
         } else {
             showAlert("You did not sign", andTitle: "Please draw your signature")

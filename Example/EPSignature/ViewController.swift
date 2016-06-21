@@ -34,7 +34,7 @@ class ViewController: UIViewController, EPSignatureDelegate {
         print("User canceled")
     }
     
-    func epSignature(_: EPSignatureViewController, didSigned signatureImage : UIImage, boundingRect: CGRect) {
+    func epSignature(_: EPSignatureViewController, didSign signatureImage : UIImage, boundingRect: CGRect) {
         print(signatureImage)
         imgViewSignature.image = signatureImage
     }
