@@ -3,4 +3,12 @@ osx_image: xcode7.1 #2
 xcode_workspace: Example/EPSignature.xcworkspace #3
 xcode_scheme: EPSignature #4
 xcode_sdk: iphonesimulator #5
-#https://github.com/ipraba/EPSignature
+
+before_install:
+- xcodebuild -version
+script:
+- DESTINATION="-destination \"platform=iOS Simulator,name=iPhone 6s,OS=latest\""
+- COMMAND="xcodebuild -project \"$TRAVIS_XCODE_PROJECT\" -scheme \"$TRAVIS_XCODE_SCHEME\" $DESTINATION"
+- eval $COMMAND clean build &>/dev/null
+- set -o pipefail
+- eval $COMMAND test | xcpretty
