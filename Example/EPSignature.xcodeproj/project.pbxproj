@@ -13,7 +13,6 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		D46ABFB2E6199B4F1D8B00FD /* Pods_EPSignature_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C5A699D3F98BA092EEC579 /* Pods_EPSignature_Tests.framework */; };
-		F4610E941C4E435800D093B5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4610E921C4E435800D093B5 /* Info.plist */; };
 		F4610E951C4E435800D093B5 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4610E931C4E435800D093B5 /* Tests.swift */; };
 		FD2F4DBD994F6A970D127DFD /* Pods_EPSignature_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E9D6DBDBE3EC5A2A4839C3 /* Pods_EPSignature_Example.framework */; };
 /* End PBXBuildFile section */
@@ -205,7 +204,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -251,7 +250,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4610E941C4E435800D093B5 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
