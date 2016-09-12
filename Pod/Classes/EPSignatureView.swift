@@ -8,41 +8,41 @@
 
 import UIKit
 
-public class EPSignatureView: UIView {
+open class EPSignatureView: UIView {
 
     // MARK: - Private Vars
     
-    private var bezierPoints = [CGPoint](count: 5, repeatedValue: CGPoint())
-    private var bezierPath = UIBezierPath()
-    private var bezierCounter : Int = 0
-    private var maxPoint = CGPointZero
-    private var minPoint = CGPointZero
+    fileprivate var bezierPoints = [CGPoint](repeating: CGPoint(), count: 5)
+    fileprivate var bezierPath = UIBezierPath()
+    fileprivate var bezierCounter : Int = 0
+    fileprivate var maxPoint = CGPoint.zero
+    fileprivate var minPoint = CGPoint.zero
     
     // MARK: - Public Vars
     
-    public var strokeColor = UIColor.blackColor()
-    public var strokeWidth: CGFloat = 2.0
-    public var isSigned: Bool = false
+    open var strokeColor = UIColor.black
+    open var strokeWidth: CGFloat = 2.0
+    open var isSigned: Bool = false
     
     // MARK: - Initializers
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.backgroundColor = .clearColor()
+        self.backgroundColor = .clear
         bezierPath.lineWidth = strokeWidth
         addLongPressGesture()
-        minPoint = CGPointMake(self.frame.size.width,self.frame.size.height)
+        minPoint = CGPoint(x: self.frame.size.width,y: self.frame.size.height)
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .clearColor()
+        self.backgroundColor = .clear
         bezierPath.lineWidth = strokeWidth
         addLongPressGesture()
-        minPoint = CGPointMake(self.frame.size.width,self.frame.size.height)
+        minPoint = CGPoint(x: self.frame.size.width,y: self.frame.size.height)
     }
     
-    override public func drawRect(rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         bezierPath.stroke()
         strokeColor.setStroke()
         bezierPath.stroke()
@@ -59,15 +59,15 @@ public class EPSignatureView: UIView {
         self.addGestureRecognizer(longPressGesture)
     }
     
-    func longPressed(gesture: UILongPressGestureRecognizer) {
-        let touchPoint = gesture.locationInView(self)
+    func longPressed(_ gesture: UILongPressGestureRecognizer) {
+        let touchPoint = gesture.location(in: self)
         let endAngle = CGFloat(2.0 * M_PI)
-        bezierPath.moveToPoint(touchPoint)
-        bezierPath.addArcWithCenter(touchPoint, radius: 2, startAngle: 0, endAngle: endAngle, clockwise: true)
+        bezierPath.move(to: touchPoint)
+        bezierPath.addArc(withCenter: touchPoint, radius: 2, startAngle: 0, endAngle: endAngle, clockwise: true)
         setNeedsDisplay()
     }
     
-    override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
         if let currentPoint = touchPoint(touches) {
             isSigned = true
@@ -76,16 +76,16 @@ public class EPSignatureView: UIView {
         }
     }
     
-    override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let currentPoint = touchPoint(touches) {
             bezierCounter += 1
             bezierPoints[bezierCounter] = currentPoint
 
             //Smoothing is done by Bezier Equations where curves are calculated based on four concurrent  points drawn
             if bezierCounter == 4 {
-                bezierPoints[3] = CGPointMake((bezierPoints[2].x + bezierPoints[4].x) / 2 , (bezierPoints[2].y + bezierPoints[4].y) / 2)
-                bezierPath.moveToPoint(bezierPoints[0])
-                bezierPath.addCurveToPoint(bezierPoints[3], controlPoint1: bezierPoints[1], controlPoint2: bezierPoints[2])
+                bezierPoints[3] = CGPoint(x: (bezierPoints[2].x + bezierPoints[4].x) / 2 , y: (bezierPoints[2].y + bezierPoints[4].y) / 2)
+                bezierPath.move(to: bezierPoints[0])
+                bezierPath.addCurve(to: bezierPoints[3], controlPoint1: bezierPoints[1], controlPoint2: bezierPoints[2])
                 setNeedsDisplay()
                 bezierPoints[0] = bezierPoints[3]
                 bezierPoints[1] = bezierPoints[4]
@@ -94,13 +94,13 @@ public class EPSignatureView: UIView {
         }
     }
     
-    override public func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         bezierCounter = 0
     }
     
-    func touchPoint(touches: Set<UITouch>) -> CGPoint? {
+    func touchPoint(_ touches: Set<UITouch>) -> CGPoint? {
         if let touch = touches.first {
-            let point = touch.locationInView(self)
+            let point = touch.location(in: self)
             //Track the signature bounding area
             if point.x > maxPoint.x {
                 maxPoint.x = point.x
@@ -123,7 +123,7 @@ public class EPSignatureView: UIView {
     
     /** Clears the drawn paths in the canvas
     */
-    public func clear() {
+    open func clear() {
         isSigned = false
         bezierPath.removeAllPoints()
         setNeedsDisplay()
@@ -131,10 +131,10 @@ public class EPSignatureView: UIView {
     
     /** Returns the drawn path as Image. Adding subview to this view will also get returned in this image.
      */
-    public func getSignatureAsImage() -> UIImage? {
+    open func getSignatureAsImage() -> UIImage? {
         if isSigned {
-            UIGraphicsBeginImageContext(CGSizeMake(self.bounds.size.width, self.bounds.size.height))
-            self.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+            UIGraphicsBeginImageContext(CGSize(width: self.bounds.size.width, height: self.bounds.size.height))
+            self.layer.render(in: UIGraphicsGetCurrentContext()!)
             let signature: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
             UIGraphicsEndImageContext()
             return signature
@@ -145,19 +145,19 @@ public class EPSignatureView: UIView {
     /** Returns the rect of signature image drawn in the canvas. This can very very useful in croping out the unwanted empty areas in the signature image returned.
      */
 
-    public func getSignatureBoundsInCanvas() -> CGRect {
-        return CGRectMake(minPoint.x, minPoint.y, maxPoint.x - minPoint.x, maxPoint.y - minPoint.y)
+    open func getSignatureBoundsInCanvas() -> CGRect {
+        return CGRect(x: minPoint.x, y: minPoint.y, width: maxPoint.x - minPoint.x, height: maxPoint.y - minPoint.y)
     }
     
     //MARK: Save load signature methods
     
-    public func saveSignature(localPath: String) {
+    open func saveSignature(_ localPath: String) {
         if isSigned {
             NSKeyedArchiver.archiveRootObject(bezierPath, toFile: localPath)
         }
     }
 
-    public func loadSignature(filePath: String) {
+    open func loadSignature(_ filePath: String) {
         if let path = getPath(filePath) {
             isSigned = true
             bezierPath = path
@@ -165,18 +165,18 @@ public class EPSignatureView: UIView {
         }
     }
     
-    private func getPath(filePath: String) -> UIBezierPath? {
-        if NSFileManager.defaultManager().fileExistsAtPath(filePath) {
-            return NSKeyedUnarchiver.unarchiveObjectWithFile(filePath) as? UIBezierPath
+    fileprivate func getPath(_ filePath: String) -> UIBezierPath? {
+        if FileManager.default.fileExists(atPath: filePath) {
+            return NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? UIBezierPath
         }
         return nil
     }
     
     func removeSignature() {
-        let docPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first
-        let filePath = (docPath! as NSString).stringByAppendingPathComponent("sig.data")
+        let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+        let filePath = (docPath! as NSString).appendingPathComponent("sig.data")
         do {
-            try NSFileManager.defaultManager().removeItemAtPath(filePath)
+            try FileManager.default.removeItem(atPath: filePath)
         }
         catch let error {
             print(error)

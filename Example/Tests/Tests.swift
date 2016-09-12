@@ -15,7 +15,7 @@ class EPCalendarTests: XCTestCase {
     }
     
     func test1 () {
-        let signatureView = EPSignatureView(frame: CGRectMake(0,0,240,320))
+        let signatureView = EPSignatureView(frame: CGRect(x: 0,y: 0,width: 240,height: 320))
         XCTAssertNil(signatureView.getSignatureAsImage())
         XCTAssertFalse(signatureView.isSigned)
     }
