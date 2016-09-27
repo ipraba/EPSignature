@@ -11,4 +11,4 @@ script:
 - COMMAND="xcodebuild -workspace \"$TRAVIS_XCODE_WORKSPACE\" -scheme \"$TRAVIS_XCODE_SCHEME\" $DESTINATION"
 - eval $COMMAND clean build &>/dev/null
 - set -o pipefail
-- eval $COMMAND test | xcpretty
+- eval $COMMAND test1 | xcpretty
