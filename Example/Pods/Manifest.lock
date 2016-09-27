@@ -1,5 +1,5 @@
 PODS:
-  - EPSignature (1.0.1)
+  - EPSignature (1.0.2)
 
 DEPENDENCIES:
   - EPSignature (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  EPSignature: 3bb269db08c47041bcc92151688600ab835b5a80
+  EPSignature: 1f925f20b837046de46b4d396bc6e432ea383908
 
 COCOAPODS: 0.39.0
