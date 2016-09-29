@@ -1,5 +1,13 @@
-import XCTest
+//
+//  ViewController.swift
+//  EPSignature
+//
+//  Created by Prabaharan on 01/13/2016.
+//  Modified By C0mrade on 27/09/2016.
+//  Copyright (c) 2016 Prabaharan. All rights reserved.
+//
 
+import XCTest
 import EPSignature
 
 class EPCalendarTests: XCTestCase {
@@ -15,7 +23,7 @@ class EPCalendarTests: XCTestCase {
     }
     
     func test1 () {
-        let signatureView = EPSignatureView(frame: CGRectMake(0,0,240,320))
+        let signatureView = EPSignatureView(frame: CGRect(x: 0, y: 0, width: 240, height: 320))
         XCTAssertNil(signatureView.getSignatureAsImage())
         XCTAssertFalse(signatureView.isSigned)
     }

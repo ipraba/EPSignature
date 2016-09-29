@@ -1,13 +1,13 @@
 language: objective-c  #1
-osx_image: xcode7.3 #2
+osx_image: xcode8 #2
 xcode_workspace: Example/EPSignature.xcworkspace #3
 xcode_scheme: EPSignature #4
-xcode_sdk: iphonesimulator #5
+xcode_sdk: iphonesimulator10.0 #5
 
 before_install:
 - xcodebuild -version
 script:
-- DESTINATION="-destination \"platform=iOS Simulator,name=iPhone 6s,OS=latest\""
+- DESTINATION="-destination \"platform=iOS Simulator,name=iPhone 7,OS=latest\""
 - COMMAND="xcodebuild -workspace \"$TRAVIS_XCODE_WORKSPACE\" -scheme \"$TRAVIS_XCODE_SCHEME\" $DESTINATION"
 - eval $COMMAND clean build &>/dev/null
 - set -o pipefail
