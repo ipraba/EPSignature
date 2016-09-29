@@ -53,7 +53,7 @@ public class EPSignatureViewController: UIViewController {
             dateFormatter.dateFormat = "dd MMMM YYYY"
             lblDate.text = dateFormatter.stringFromDate(NSDate())
         } else {
-            lblDate.hidden = true
+            lblDate.hidden = false
         }
         
         if showsSaveSignatureOption {
