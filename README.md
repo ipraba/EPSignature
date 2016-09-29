@@ -81,7 +81,7 @@ Properties | Description
 ### EPSignatureViewController Delegates
 ```swift
 func epSignature(_: EPSignature.EPSignatureViewController, didCancel error: NSError)
-func epSignature(_: EPSignature.EPSignatureViewController, didSigned signatureImage: UIImage, boundingRect: CGRect)
+func epSignature(_: EPSignature.EPSignatureViewController, didSign signatureImage: UIImage, boundingRect: CGRect)
 ```
 
 Note: boundingRect will contain the bounds of the signed image retrieved. Crop using this rect to make shorter and small signature images
