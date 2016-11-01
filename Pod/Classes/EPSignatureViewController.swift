@@ -64,7 +64,6 @@ open class EPSignatureViewController: UIViewController {
             let actionButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.action, target:   self, action: #selector(EPSignatureViewController.onTouchActionButton(_:)))
             actionButton.tintColor = tintColor
             self.navigationItem.rightBarButtonItems = [doneButton, clearButton, actionButton]
-            switchSaveSignature.onTintColor = tintColor
         } else {
             self.navigationItem.rightBarButtonItems = [doneButton, clearButton]
             lblDefaultSignature.isHidden = true
