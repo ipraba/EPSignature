@@ -140,7 +140,6 @@ open class EPSignatureViewController: UIViewController {
     
     func onTouchActionButton(_ barButton: UIBarButtonItem) {
         let action = UIAlertController(title:NSLocalizedString("Default Signature", comment:"Default Signature"), message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
-        action.view.tintColor = tintColor
         
         action.addAction(UIAlertAction(title:NSLocalizedString("Load default signature", comment:"Load default signature" ), style: UIAlertActionStyle.default, handler: { action in
             let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
