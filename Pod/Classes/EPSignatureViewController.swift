@@ -120,7 +120,13 @@ open class EPSignatureViewController: UIViewController {
                 signatureView.saveSignature(filePath)
             }
             signatureDelegate?.epSignature!(self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
-            dismiss(animated: true, completion: nil)
+            if self.navigationController == nil {
+                dismiss(animated: true, completion: nil)
+
+            }else
+            {
+                self.navigationController?.popViewController(animated: true)
+            }
         } else {
             showAlert(NSLocalizedString("No signature", comment:"No signature"), andTitle:NSLocalizedString("Please sign on the line.", comment:"Please sign on the line.") )
         }
