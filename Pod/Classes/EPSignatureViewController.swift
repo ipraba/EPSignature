@@ -109,7 +109,13 @@ open class EPSignatureViewController: UIViewController {
     
     func onTouchCancelButton() {
         signatureDelegate?.epSignature!(self, didCancel: NSError(domain: "EPSignatureDomain", code: 1, userInfo: [NSLocalizedDescriptionKey:"User not signed"]))
-        dismiss(animated: true, completion: nil)
+        if self.navigationController == nil {
+            dismiss(animated: true, completion: nil)
+            
+        }else
+        {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 
     func onTouchDoneButton() {
