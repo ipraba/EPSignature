@@ -27,7 +27,6 @@ open class EPSignatureViewController: UIViewController {
     @IBOutlet weak var signatureView: EPSignatureView!
     
     // MARK: - Public Vars
-    open var forceLandscape: Bool = false
 
     open var showsDate: Bool = true
     open var showsSaveSignatureOption: Bool = true
@@ -40,7 +39,7 @@ open class EPSignatureViewController: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
         
-        forceLandscape ? UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation") : ()
+   
 
         
         let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(EPSignatureViewController.onTouchCancelButton))
@@ -81,6 +80,9 @@ open class EPSignatureViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: AppDelegate method to force rotation
+    public func canRotate() -> Void {}
+
     // MARK: - Initializers
     
     public convenience init(signatureDelegate: EPSignatureDelegate) {
