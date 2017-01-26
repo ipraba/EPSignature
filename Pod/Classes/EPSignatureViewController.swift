@@ -33,6 +33,8 @@ open class EPSignatureViewController: UIViewController {
     open weak var signatureDelegate: EPSignatureDelegate?
     open var subtitleText = "Sign Here"
     open var tintColor = UIColor.defaultTintColor()
+    
+    open var showsSwitchSaveSignature: Bool = true
 
     // MARK: - Life cycle methods
     
@@ -68,7 +70,13 @@ open class EPSignatureViewController: UIViewController {
         }
         
         lblSignatureSubtitle.text = subtitleText
-        switchSaveSignature.setOn(false, animated: true)
+        
+        if showsSwitchSaveSignature   {
+            switchSaveSignature.setOn(false, animated: true)
+        } else {
+            switchSaveSignature.isHidden = true
+        }
+
     }
     
     override open func didReceiveMemoryWarning() {
@@ -93,6 +101,16 @@ open class EPSignatureViewController: UIViewController {
         let bundle = Bundle(for: EPSignatureViewController.self)
         super.init(nibName: "EPSignatureViewController", bundle: bundle)
     }
+    
+    public init(signatureDelegate: EPSignatureDelegate, showsDate: Bool, showsSaveSignatureOption: Bool, showsSwitchSaveSignature: Bool ) {
+        self.showsDate = showsDate
+        self.showsSaveSignatureOption = showsSaveSignatureOption
+        self.signatureDelegate = signatureDelegate
+        self.showsSwitchSaveSignature = showsSwitchSaveSignature
+        let bundle = Bundle(for: EPSignatureViewController.self)
+        super.init(nibName: "EPSignatureViewController", bundle: bundle)
+    }
+
 
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

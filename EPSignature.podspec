@@ -14,10 +14,10 @@ Features
 7. Can extract the signature as Image
 8. Draws smoothly
 DESC
-  s.homepage         = "https://github.com/ipraba/EPSignature"
+  s.homepage         = "https://github.com/perwyl/EPSignature.git"
   s.license          = 'MIT'
   s.author           = { "Prabaharan" => "mailprabaharan.e@gmail.com" }
-  s.source           = { :git => "https://github.com/ipraba/EPSignature.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/perwyl/EPSignature.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
