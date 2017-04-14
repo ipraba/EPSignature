@@ -20,7 +20,7 @@ open class EPSignatureView: UIView {
     
     open var strokeColor = UIColor.black
     open var strokeWidth: CGFloat = 2.0
-    open var isSigned: Bool = false
+    dynamic open var isSigned: Bool = false
     
     // MARK: - Initializers
     
