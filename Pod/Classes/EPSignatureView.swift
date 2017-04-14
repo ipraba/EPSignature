@@ -119,7 +119,6 @@ open class EPSignatureView: UIView {
         var ratio =  min(self.bounds.width / bezierPath.bounds.width, 1)
         ratio =  min((self.bounds.height - 64) / bezierPath.bounds.height, ratio)
         bezierPath.apply(CGAffineTransform(scaleX: ratio, y: ratio))
-        bezierPath.apply(CGAffineTransform(translationX: -bezierPath.bounds.origin.x, y: -bezierPath.bounds.origin.y + 64))
         setNeedsDisplay()
     }
     
