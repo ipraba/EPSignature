@@ -50,7 +50,8 @@ open class EPSignatureViewController: UIViewController {
         
         if showsDate {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd MMMM YYYY"
+            dateFormatter.dateStyle  = DateFormatter.Style.short
+            dateFormatter.timeStyle  = DateFormatter.Style.none
             lblDate.text = dateFormatter.string(from: Date())
         } else {
             lblDate.isHidden = true
