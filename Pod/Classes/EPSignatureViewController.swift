@@ -145,4 +145,7 @@ open class EPSignatureViewController: UIViewController {
         signatureView.clear()
     }
     
+    override open func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        signatureView.reposition()
+    }
 }
