@@ -132,7 +132,7 @@ open class EPSignatureView: UIView {
     /** validates the signature bounds
      */
     open func validateSignatureBounds() -> Bool {
-        return bezierPath.bounds.size.width >= self.bounds.width * 0.1 && bezierPath.bounds.size.height >= self.bounds.height * 0.1
+        return bezierPath.bounds.size.width >= self.bounds.width * 0.1 || bezierPath.bounds.size.height >= self.bounds.height * 0.1
     }
     
     /** Returns the drawn path as Image. Adding subview to this view will also get returned in this image.
