@@ -35,6 +35,8 @@ open class EPSignatureViewController: UIViewController {
     open var tintColor = UIColor.defaultTintColor()
     
     open var showsSwitchSaveSignature: Bool = true
+    open var alertTitle: String = "Please draw your signature"
+    open var alertMessage: String = "You did not sign"
 
     // MARK: - Life cycle methods
     
@@ -134,7 +136,7 @@ open class EPSignatureViewController: UIViewController {
             signatureDelegate?.epSignature!(self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
             dismiss(animated: true, completion: nil)
         } else {
-            showAlert("You did not sign", andTitle: "Please draw your signature")
+            showAlert(alertMessage, andTitle: alertTitle)
         }
     }
     
