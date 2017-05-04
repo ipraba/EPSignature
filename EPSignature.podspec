@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "EPSignature"
-  s.version          = "1.0.6"
+  s.version          = "1.0.7"
   s.summary          = "Signature component for iOS in Swift"
   s.description      = <<-DESC
 Features
