@@ -19,7 +19,7 @@ DESC
   s.author           = { "Prabaharan" => "mailprabaharan.e@gmail.com" }
   s.source           = { :git => "https://github.com/perwyl/EPSignature.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '10.3'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
