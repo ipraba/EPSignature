@@ -458,7 +458,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-EPSignature_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-EPSignature_Example/Pods-EPSignature_Example.modulemap";
@@ -508,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
@@ -530,7 +530,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/EPSignature/EPSignature-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/EPSignature/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/EPSignature/EPSignature.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -582,7 +582,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
@@ -603,7 +603,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/EPSignature/EPSignature-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/EPSignature/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/EPSignature/EPSignature.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -633,7 +633,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-EPSignature_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-EPSignature_Tests/Pods-EPSignature_Tests.modulemap";
@@ -666,7 +666,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-EPSignature_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-EPSignature_Tests/Pods-EPSignature_Tests.modulemap";
@@ -700,7 +700,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-EPSignature_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-EPSignature_Example/Pods-EPSignature_Example.modulemap";
