@@ -117,6 +117,7 @@ open class EPSignatureView: UIView {
      */
     open func validateSignatureBounds() -> Bool {
         return bezierPath.bounds.size.width >= self.bounds.width * 0.1 || bezierPath.bounds.size.height >= self.bounds.height * 0.1
+    }
 
     /** scales and repositions the path
      */
