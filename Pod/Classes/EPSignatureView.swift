@@ -134,14 +134,19 @@ open class EPSignatureView: UIView {
         }
         return nil
     }
-    
+  
+    /** Returns the drawn path as UIBezierPath. */
+    open func getSignatureAsPath() -> UIBezierPath {
+      return bezierPath
+    }
+  
     /** Returns the rect of signature image drawn in the canvas. This can very very useful in croping out the unwanted empty areas in the signature image returned.
      */
 
     open func getSignatureBoundsInCanvas() -> CGRect {
         return bezierPath.bounds
     }
-    
+  
     //MARK: Save load signature methods
     
     open func saveSignature(_ localPath: String) {
