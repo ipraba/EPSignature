@@ -18,13 +18,13 @@ open class EPSignatureViewController: UIViewController {
 
     // MARK: - IBOutlets
     
-    @IBOutlet weak var switchSaveSignature: UISwitch!
-    @IBOutlet weak var lblSignatureSubtitle: UILabel!
-    @IBOutlet weak var lblDefaultSignature: UILabel!
-    @IBOutlet weak var lblDate: UILabel!
-    @IBOutlet weak var viewMargin: UIView!
-    @IBOutlet weak var lblX: UILabel!
-    @IBOutlet weak var signatureView: EPSignatureView!
+    @IBOutlet private weak var switchSaveSignature: UISwitch!
+    @IBOutlet private weak var lblSignatureSubtitle: UILabel!
+    @IBOutlet private weak var lblDefaultSignature: UILabel!
+    @IBOutlet private weak var lblDate: UILabel!
+    @IBOutlet private weak var viewMargin: UIView!
+    @IBOutlet private weak var lblX: UILabel!
+    @IBOutlet public private (set) weak var signatureView: EPSignatureView!
     
     // MARK: - Public Vars
     
