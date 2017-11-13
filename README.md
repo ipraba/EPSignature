@@ -51,6 +51,9 @@ Just drag and drop the files in `Pod/Classes` folder into your project
 
 ### Initialization of EPSignatureViewController
 ```swift
+
+import EPSignature
+
 let signatureVC = EPSignatureViewController(signatureDelegate: self, showsDate: true, showsSaveSignatureOption: true)
 signatureVC.subtitleText = "I agree to the terms and conditions"
 signatureVC.title = "John Doe"
