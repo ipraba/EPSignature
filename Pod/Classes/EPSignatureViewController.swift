@@ -33,6 +33,10 @@ open class EPSignatureViewController: UIViewController {
     open weak var signatureDelegate: EPSignatureDelegate?
     open var subtitleText = "Sign Here"
     open var tintColor = UIColor.defaultTintColor()
+    
+    open var showsSwitchSaveSignature: Bool = true
+    open var alertTitle: String = "Please draw your signature"
+    open var alertMessage: String = "You did not sign"
 
     // MARK: - Life cycle methods
     
@@ -69,7 +73,13 @@ open class EPSignatureViewController: UIViewController {
         }
         
         lblSignatureSubtitle.text = subtitleText
-        switchSaveSignature.setOn(false, animated: true)
+        
+        if showsSwitchSaveSignature   {
+            switchSaveSignature.setOn(false, animated: true)
+        } else {
+            switchSaveSignature.isHidden = true
+        }
+
     }
     
     override open func didReceiveMemoryWarning() {
@@ -94,6 +104,16 @@ open class EPSignatureViewController: UIViewController {
         let bundle = Bundle(for: EPSignatureViewController.self)
         super.init(nibName: "EPSignatureViewController", bundle: bundle)
     }
+    
+    public init(signatureDelegate: EPSignatureDelegate, showsDate: Bool, showsSaveSignatureOption: Bool, showsSwitchSaveSignature: Bool ) {
+        self.showsDate = showsDate
+        self.showsSaveSignatureOption = showsSaveSignatureOption
+        self.signatureDelegate = signatureDelegate
+        self.showsSwitchSaveSignature = showsSwitchSaveSignature
+        let bundle = Bundle(for: EPSignatureViewController.self)
+        super.init(nibName: "EPSignatureViewController", bundle: bundle)
+    }
+
 
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -101,12 +121,12 @@ open class EPSignatureViewController: UIViewController {
     
     // MARK: - Button Actions
     
-    func onTouchCancelButton() {
+    @objc func onTouchCancelButton() {
         signatureDelegate?.epSignature!(self, didCancel: NSError(domain: "EPSignatureDomain", code: 1, userInfo: [NSLocalizedDescriptionKey:"User not signed"]))
         dismiss(animated: true, completion: nil)
     }
 
-    func onTouchDoneButton() {
+    @objc func onTouchDoneButton() {
         if let signature = signatureView.getSignatureAsImage() {
             if switchSaveSignature.isOn {
                 let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
@@ -116,11 +136,11 @@ open class EPSignatureViewController: UIViewController {
             signatureDelegate?.epSignature!(self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
             dismiss(animated: true, completion: nil)
         } else {
-            showAlert("You did not sign", andTitle: "Please draw your signature")
+            showAlert(alertMessage, andTitle: alertTitle)
         }
     }
     
-    func onTouchActionButton(_ barButton: UIBarButtonItem) {
+    @objc func onTouchActionButton(_ barButton: UIBarButtonItem) {
         let action = UIAlertController(title: "Action", message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
         action.view.tintColor = tintColor
         
@@ -142,7 +162,7 @@ open class EPSignatureViewController: UIViewController {
         present(action, animated: true, completion: nil)
     }
 
-    func onTouchClearButton() {
+    @objc func onTouchClearButton() {
         signatureView.clear()
     }
     

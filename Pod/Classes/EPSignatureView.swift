@@ -57,7 +57,7 @@ open class EPSignatureView: UIView {
         self.addGestureRecognizer(longPressGesture)
     }
     
-    func longPressed(_ gesture: UILongPressGestureRecognizer) {
+    @objc func longPressed(_ gesture: UILongPressGestureRecognizer) {
         let touchPoint = gesture.location(in: self)
         let endAngle: CGFloat = .pi * 2.0
         bezierPath.move(to: touchPoint)
@@ -113,6 +113,12 @@ open class EPSignatureView: UIView {
         setNeedsDisplay()
     }
     
+    /** validates the signature bounds
+     */
+    open func validateSignatureBounds() -> Bool {
+        return bezierPath.bounds.size.width >= self.bounds.width * 0.1 || bezierPath.bounds.size.height >= self.bounds.height * 0.1
+    }
+
     /** scales and repositions the path
      */
     open func reposition() {
@@ -120,16 +126,19 @@ open class EPSignatureView: UIView {
         ratio =  min((self.bounds.height - 64) / bezierPath.bounds.height, ratio)
         bezierPath.apply(CGAffineTransform(scaleX: ratio, y: ratio))
         setNeedsDisplay()
+
     }
     
     /** Returns the drawn path as Image. Adding subview to this view will also get returned in this image.
      */
     open func getSignatureAsImage() -> UIImage? {
-        if isSigned {
+        
+        if isSigned && validateSignatureBounds() {
             UIGraphicsBeginImageContext(CGSize(width: self.bounds.size.width, height: self.bounds.size.height))
             self.layer.render(in: UIGraphicsGetCurrentContext()!)
             let signature: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
             UIGraphicsEndImageContext()
+            
             return signature
         }
         return nil
