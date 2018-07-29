@@ -17,7 +17,6 @@
 		9F2D653CA3056F23666C0642C68FFB92 /* Pods-EPSignature_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCDBB7E7656C137C08E532EF200030F /* Pods-EPSignature_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD181E43627D5D00CF73A151804DDA7E /* EPSignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D233B174F5F22626D1913A0FF1FC19D /* EPSignatureViewController.swift */; };
 		B0242434CE715B92729BE6CFA879EA98 /* EPSignature-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5A8239DC33F6CA6AC1495E6CC80EAB /* EPSignature-dummy.m */; };
-		B792FA3D261FB817E67322E089DB4521 /* EPSignatureViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = CEF7F1045333CBA6600F3A7EE8812837 /* EPSignatureViewController.xib */; };
 		E19FC288B4AE553FE6CAE9EE302F338D /* EPSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717443122C754FD4F15EAD0AF06D18E0 /* EPSignatureView.swift */; };
 		EFF204EEDA3A3CA41E6DBD542E5CAC0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		F28E069769A08F694A5C737B0A186F42 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -384,7 +383,6 @@
 				B0242434CE715B92729BE6CFA879EA98 /* EPSignature-dummy.m in Sources */,
 				E19FC288B4AE553FE6CAE9EE302F338D /* EPSignatureView.swift in Sources */,
 				AD181E43627D5D00CF73A151804DDA7E /* EPSignatureViewController.swift in Sources */,
-				B792FA3D261FB817E67322E089DB4521 /* EPSignatureViewController.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
