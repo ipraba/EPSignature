@@ -126,8 +126,8 @@ open class EPSignatureView: UIView {
      */
     open func getSignatureAsImage() -> UIImage? {
         if isSigned {
-            UIGraphicsBeginImageContext(CGSize(width: self.bounds.size.width, height: self.bounds.size.height))
-            self.layer.render(in: UIGraphicsGetCurrentContext()!)
+            UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0)
+            drawHierarchy(in: bounds, afterScreenUpdates: false)
             let signature: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
             UIGraphicsEndImageContext()
             return signature
