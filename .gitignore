@@ -12,7 +12,6 @@ build/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata
-xcshareddata
 *.xccheckout
 profile
 *.moved-aside
