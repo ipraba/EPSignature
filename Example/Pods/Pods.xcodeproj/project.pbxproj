@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0BF5BD6534A2ACF73646407F62EE1A05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		22C622C37415E39C23622B8AB839E441 /* EPSignatureViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 1CE59112541DE1900FAA8215DB0744A7 /* EPSignatureViewController.xib */; };
 		472637E90F89C993C6242352358B051F /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954F6B569D457E5A83E21CC5B6C6BCD6 /* EPExtensions.swift */; };
 		4878A0F5F33AEB43CDA48DC7AB338CE1 /* Pods-EPSignature_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A916F42B5DFA3C3B92E7121E9EB6DFC3 /* Pods-EPSignature_Example-dummy.m */; };
 		49E16E2EE1A67CE83EA5D0AB90862868 /* Pods-EPSignature_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BCDBB7E7656C137C08E532EF200030F /* Pods-EPSignature_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -406,7 +405,6 @@
 				DECB3BD71040B2440D70CDD3B44EE27F /* EPSignature-dummy.m in Sources */,
 				523F998690B930CD8E3E09AAD0D5CEEA /* EPSignatureView.swift in Sources */,
 				629B79D880E20BCBA416B663EEF94D37 /* EPSignatureViewController.swift in Sources */,
-				22C622C37415E39C23622B8AB839E441 /* EPSignatureViewController.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +468,7 @@
 				PRODUCT_NAME = Pods_EPSignature_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -544,7 +542,7 @@
 				PRODUCT_NAME = EPSignature;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -624,7 +622,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -657,7 +655,7 @@
 				PRODUCT_NAME = Pods_EPSignature_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -691,7 +689,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -725,7 +723,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
