@@ -87,7 +87,7 @@ open class EPSignatureViewController: UIViewController {
         self.init(signatureDelegate: signatureDelegate, showsDate: showsDate, showsSaveSignatureOption: true)
     }
     
-    public init(signatureDelegate: EPSignatureDelegate, showsDate: Bool, showsSaveSignatureOption: Bool ) {
+    public init(signatureDelegate: EPSignatureDelegate?, showsDate: Bool, showsSaveSignatureOption: Bool ) {
         self.showsDate = showsDate
         self.showsSaveSignatureOption = showsSaveSignatureOption
         self.signatureDelegate = signatureDelegate
