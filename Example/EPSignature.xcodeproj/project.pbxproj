@@ -209,13 +209,13 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = DG779MAMM2;
-						LastSwiftMigration = 0900;
+						DevelopmentTeam = L74Y3RTC7X;
+						LastSwiftMigration = "";
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = DG779MAMM2;
-						LastSwiftMigration = 0900;
+						DevelopmentTeam = L74Y3RTC7X;
+						LastSwiftMigration = "";
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -516,7 +516,7 @@
 			baseConfigurationReference = 1CC0D063C0E6BB1DA5D21548 /* Pods-EPSignature_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DG779MAMM2;
+				DEVELOPMENT_TEAM = L74Y3RTC7X;
 				INFOPLIST_FILE = EPSignature/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -533,7 +533,7 @@
 			baseConfigurationReference = EAC7FAB870C77D62CB94C285 /* Pods-EPSignature_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DG779MAMM2;
+				DEVELOPMENT_TEAM = L74Y3RTC7X;
 				INFOPLIST_FILE = EPSignature/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -550,7 +550,7 @@
 			baseConfigurationReference = BADBD621301FD946BBB4C228 /* Pods-EPSignature_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = DG779MAMM2;
+				DEVELOPMENT_TEAM = L74Y3RTC7X;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -570,7 +570,7 @@
 			baseConfigurationReference = 0F8DB633D789A18A31700E0D /* Pods-EPSignature_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = DG779MAMM2;
+				DEVELOPMENT_TEAM = L74Y3RTC7X;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
