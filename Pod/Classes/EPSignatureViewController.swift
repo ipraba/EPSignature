@@ -79,15 +79,15 @@ open class EPSignatureViewController: UIViewController {
     
     // MARK: - Initializers
     
-    public convenience init(signatureDelegate: EPSignatureDelegate) {
+    @objc public convenience init(signatureDelegate: EPSignatureDelegate) {
         self.init(signatureDelegate: signatureDelegate, showsDate: true, showsSaveSignatureOption: true)
     }
     
-    public convenience init(signatureDelegate: EPSignatureDelegate, showsDate: Bool) {
+    @objc public convenience init(signatureDelegate: EPSignatureDelegate, showsDate: Bool) {
         self.init(signatureDelegate: signatureDelegate, showsDate: showsDate, showsSaveSignatureOption: true)
     }
     
-    public init(signatureDelegate: EPSignatureDelegate, showsDate: Bool, showsSaveSignatureOption: Bool ) {
+    @objc public init(signatureDelegate: EPSignatureDelegate, showsDate: Bool, showsSaveSignatureOption: Bool ) {
         self.showsDate = showsDate
         self.showsSaveSignatureOption = showsSaveSignatureOption
         self.signatureDelegate = signatureDelegate
