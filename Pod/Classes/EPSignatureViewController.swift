@@ -27,28 +27,25 @@ open class EPSignatureViewController: UIViewController {
     @IBOutlet weak var signatureView: EPSignatureView!
     
     // MARK: - Public Vars
-
+    
     open var showsDate: Bool = true
     open var showsSaveSignatureOption: Bool = true
     open weak var signatureDelegate: EPSignatureDelegate?
-    open var subtitleText = NSLocalizedString("Sign Here", comment:"Sign Here") 
+    open var subtitleText = "Sign Here"
     open var tintColor = UIColor.defaultTintColor()
 
     // MARK: - Life cycle methods
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-        
-   
 
-        
-        let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(EPSignatureViewController.onTouchCancelButton))
+        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(EPSignatureViewController.onTouchCancelButton))
         cancelButton.tintColor = tintColor
         self.navigationItem.leftBarButtonItem = cancelButton
         
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(EPSignatureViewController.onTouchDoneButton))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(EPSignatureViewController.onTouchDoneButton))
         doneButton.tintColor = tintColor
-        let clearButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.trash, target: self, action: #selector(EPSignatureViewController.onTouchClearButton))
+        let clearButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(EPSignatureViewController.onTouchClearButton))
         clearButton.tintColor = tintColor
         
         if showsDate {
@@ -61,9 +58,10 @@ open class EPSignatureViewController: UIViewController {
         }
         
         if showsSaveSignatureOption {
-            let actionButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.action, target:   self, action: #selector(EPSignatureViewController.onTouchActionButton(_:)))
+            let actionButton = UIBarButtonItem(barButtonSystemItem: .action, target:   self, action: #selector(EPSignatureViewController.onTouchActionButton(_:)))
             actionButton.tintColor = tintColor
             self.navigationItem.rightBarButtonItems = [doneButton, clearButton, actionButton]
+            switchSaveSignature.onTintColor = tintColor
         } else {
             self.navigationItem.rightBarButtonItems = [doneButton, clearButton]
             lblDefaultSignature.isHidden = true
@@ -79,9 +77,6 @@ open class EPSignatureViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: AppDelegate method to force rotation
-    public func canRotate() -> Void {}
-
     // MARK: - Initializers
     
     public convenience init(signatureDelegate: EPSignatureDelegate) {
@@ -106,18 +101,12 @@ open class EPSignatureViewController: UIViewController {
     
     // MARK: - Button Actions
     
-    func onTouchCancelButton() {
+    @objc func onTouchCancelButton() {
         signatureDelegate?.epSignature!(self, didCancel: NSError(domain: "EPSignatureDomain", code: 1, userInfo: [NSLocalizedDescriptionKey:"User not signed"]))
-        if self.navigationController == nil {
-            dismiss(animated: true, completion: nil)
-            
-        }else
-        {
-            self.navigationController?.popViewController(animated: true)
-        }
+        dismiss(animated: true, completion: nil)
     }
 
-    func onTouchDoneButton() {
+    @objc func onTouchDoneButton() {
         if let signature = signatureView.getSignatureAsImage() {
             if switchSaveSignature.isOn {
                 let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
@@ -125,32 +114,27 @@ open class EPSignatureViewController: UIViewController {
                 signatureView.saveSignature(filePath)
             }
             signatureDelegate?.epSignature!(self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
-            if self.navigationController == nil {
-                dismiss(animated: true, completion: nil)
-
-            }else
-            {
-                self.navigationController?.popViewController(animated: true)
-            }
+            dismiss(animated: true, completion: nil)
         } else {
-            showAlert(NSLocalizedString("No signature", comment:"No signature"), andTitle:NSLocalizedString("Please sign on the line.", comment:"Please sign on the line.") )
+            showAlert("You did not sign", andTitle: "Please draw your signature")
         }
     }
     
-    func onTouchActionButton(_ barButton: UIBarButtonItem) {
-        let action = UIAlertController(title:NSLocalizedString("Default Signature", comment:"Default Signature"), message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
+    @objc func onTouchActionButton(_ barButton: UIBarButtonItem) {
+        let action = UIAlertController(title: "Action", message: "", preferredStyle: .actionSheet)
+        action.view.tintColor = tintColor
         
-        action.addAction(UIAlertAction(title:NSLocalizedString("Load default signature", comment:"Load default signature" ), style: UIAlertActionStyle.default, handler: { action in
+        action.addAction(UIAlertAction(title: "Load default signature", style: .default, handler: { action in
             let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
             let filePath = (docPath! as NSString).appendingPathComponent("sig.data")
             self.signatureView.loadSignature(filePath)
         }))
         
-        action.addAction(UIAlertAction(title:NSLocalizedString( "Delete default signature", comment: "Delete default signature" ), style: UIAlertActionStyle.destructive, handler: { action in
+        action.addAction(UIAlertAction(title: "Delete default signature", style: .destructive, handler: { action in
             self.signatureView.removeSignature()
         }))
         
-        action.addAction(UIAlertAction(title:NSLocalizedString( "Cancel", comment: "Cancel" ) , style: UIAlertActionStyle.cancel, handler: nil))
+        action.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         if let popOver = action.popoverPresentationController {
             popOver.barButtonItem = barButton
@@ -158,8 +142,11 @@ open class EPSignatureViewController: UIViewController {
         present(action, animated: true, completion: nil)
     }
 
-    func onTouchClearButton() {
+    @objc func onTouchClearButton() {
         signatureView.clear()
     }
     
+    override open func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        signatureView.reposition()
+    }
 }
