@@ -31,7 +31,7 @@ open class EPSignatureViewController: UIViewController {
     open var showsDate: Bool = true
     open var showsSaveSignatureOption: Bool = true
     open weak var signatureDelegate: EPSignatureDelegate?
-    open var subtitleText = "Sign Here"
+    open var subtitleText = NSLocalizedString("Sign Here", comment:"Sign Here")
     open var tintColor = UIColor.defaultTintColor()
 
     // MARK: - Life cycle methods
@@ -114,10 +114,17 @@ open class EPSignatureViewController: UIViewController {
                 signatureView.saveSignature(filePath)
             }
             signatureDelegate?.epSignature!(self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
-            dismiss(animated: true, completion: nil)
+            if self.navigationController == nil {
+                dismiss(animated: true, completion: nil)
+                
+            }else
+            {
+                self.navigationController?.popViewController(animated: true)
+            }
         } else {
-            showAlert("You did not sign", andTitle: "Please draw your signature")
+            showAlert(NSLocalizedString("No signature", comment:"No signature"), andTitle:NSLocalizedString("Please sign on the line.", comment:"Please sign on the line.") )
         }
+
     }
     
     @objc func onTouchActionButton(_ barButton: UIBarButtonItem) {
