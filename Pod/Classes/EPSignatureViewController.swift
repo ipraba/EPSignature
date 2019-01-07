@@ -18,13 +18,13 @@ open class EPSignatureViewController: UIViewController {
 
     // MARK: - IBOutlets
     
-    @IBOutlet weak var switchSaveSignature: UISwitch!
+    @IBOutlet public weak var switchSaveSignature: UISwitch!
     @IBOutlet weak var lblSignatureSubtitle: UILabel!
     @IBOutlet weak var lblDefaultSignature: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var viewMargin: UIView!
     @IBOutlet weak var lblX: UILabel!
-    @IBOutlet weak var signatureView: EPSignatureView!
+    @IBOutlet public weak var signatureView: EPSignatureView!
     
     // MARK: - Public Vars
     
@@ -106,7 +106,8 @@ open class EPSignatureViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
-    @objc func onTouchDoneButton() {
+    @objc
+    open func onTouchDoneButton() {
         if let signature = signatureView.getSignatureAsImage() {
             if switchSaveSignature.isOn {
                 let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first

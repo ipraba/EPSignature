@@ -16,7 +16,7 @@ extension UIViewController {
         showAlert(message, andTitle: "")
     }
     
-    func showAlert(_ message: String, andTitle title: String) {
+    public func showAlert(_ message: String, andTitle title: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
         // add an action (button)
