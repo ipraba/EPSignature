@@ -19,8 +19,8 @@ open class EPSignatureViewController: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet public weak var switchSaveSignature: UISwitch!
-    @IBOutlet weak var lblSignatureSubtitle: UILabel!
-    @IBOutlet weak var lblDefaultSignature: UILabel!
+    @IBOutlet public weak var lblSignatureSubtitle: UILabel!
+    @IBOutlet public weak var lblDefaultSignature: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var viewMargin: UIView!
     @IBOutlet weak var lblX: UILabel!
