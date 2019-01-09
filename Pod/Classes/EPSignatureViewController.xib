@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +15,7 @@
                 <outlet property="lblDate" destination="axD-zL-F02" id="wTq-kl-F6R"/>
                 <outlet property="lblDefaultSignature" destination="aik-5V-tSc" id="I3Z-k5-p5s"/>
                 <outlet property="lblSignatureSubtitle" destination="rdS-ZH-7LX" id="JNs-Ic-dDV"/>
+                <outlet property="lblTitle" destination="EeN-uo-okz" id="rXH-Tc-5FU"/>
                 <outlet property="lblX" destination="MkH-Jy-I8l" id="LOa-wr-8Mx"/>
                 <outlet property="signatureView" destination="OAr-kk-HpY" id="4ZM-Go-wnK"/>
                 <outlet property="switchSaveSignature" destination="J7f-zy-tMu" id="KAn-zS-2zW"/>
@@ -28,9 +29,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAr-kk-HpY" customClass="EPSignatureView" customModule="EPSignature" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeN-uo-okz" userLabel="LblTitle">
+                    <rect key="frame" x="163.5" y="30" width="48" height="24"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save to default signature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aik-5V-tSc">
                     <rect key="frame" x="104" y="613" width="165" height="29"/>
                     <constraints>
@@ -68,7 +75,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 December 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axD-zL-F02">
-                    <rect key="frame" x="238" y="40" width="122" height="17"/>
+                    <rect key="frame" x="238" y="64" width="122" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -82,24 +89,27 @@
             <constraints>
                 <constraint firstItem="Yrj-8B-7oQ" firstAttribute="leading" secondItem="F5l-mP-b9o" secondAttribute="leading" constant="15" id="5PA-ug-Sg6"/>
                 <constraint firstItem="MkH-Jy-I8l" firstAttribute="leading" secondItem="Yrj-8B-7oQ" secondAttribute="leading" id="64f-F5-UUL"/>
+                <constraint firstItem="axD-zL-F02" firstAttribute="top" secondItem="EeN-uo-okz" secondAttribute="bottom" constant="10" id="8ZH-Xi-Bvt"/>
                 <constraint firstItem="F5l-mP-b9o" firstAttribute="trailing" secondItem="axD-zL-F02" secondAttribute="trailing" constant="15" id="9Pq-L2-SZk"/>
+                <constraint firstItem="OAr-kk-HpY" firstAttribute="leading" secondItem="F5l-mP-b9o" secondAttribute="leading" id="9k0-nX-ncD"/>
+                <constraint firstItem="F5l-mP-b9o" firstAttribute="trailing" secondItem="OAr-kk-HpY" secondAttribute="trailing" id="GGK-aq-IqW"/>
                 <constraint firstItem="aik-5V-tSc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-1" id="GlS-Yf-S40"/>
                 <constraint firstItem="F5l-mP-b9o" firstAttribute="trailing" secondItem="rdS-ZH-7LX" secondAttribute="trailing" constant="20" id="JOv-bb-Yrx"/>
                 <constraint firstItem="Yrj-8B-7oQ" firstAttribute="top" secondItem="MkH-Jy-I8l" secondAttribute="bottom" constant="3" id="K58-Xq-qgO"/>
                 <constraint firstItem="rdS-ZH-7LX" firstAttribute="leading" secondItem="F5l-mP-b9o" secondAttribute="leading" constant="20" id="L7L-MI-kvu"/>
                 <constraint firstItem="aik-5V-tSc" firstAttribute="top" secondItem="rdS-ZH-7LX" secondAttribute="bottom" constant="10" id="MgR-XF-1Bq"/>
+                <constraint firstItem="F5l-mP-b9o" firstAttribute="bottom" secondItem="OAr-kk-HpY" secondAttribute="bottom" id="O3T-AL-wWM"/>
                 <constraint firstItem="F5l-mP-b9o" firstAttribute="trailing" secondItem="Yrj-8B-7oQ" secondAttribute="trailing" constant="15" id="Oc8-OS-bPq"/>
-                <constraint firstItem="OAr-kk-HpY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="R89-jA-Ieb"/>
                 <constraint firstItem="rdS-ZH-7LX" firstAttribute="top" secondItem="Yrj-8B-7oQ" secondAttribute="bottom" constant="15" id="REi-Qo-wZH"/>
-                <constraint firstAttribute="trailing" secondItem="OAr-kk-HpY" secondAttribute="trailing" id="Wcg-X5-9zF"/>
-                <constraint firstAttribute="bottom" secondItem="OAr-kk-HpY" secondAttribute="bottom" id="WtB-mL-Yei"/>
                 <constraint firstItem="J7f-zy-tMu" firstAttribute="leading" secondItem="aik-5V-tSc" secondAttribute="trailing" constant="10" id="ZAL-TA-pyS"/>
-                <constraint firstItem="OAr-kk-HpY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hnC-tQ-bvr"/>
-                <constraint firstItem="axD-zL-F02" firstAttribute="top" secondItem="F5l-mP-b9o" secondAttribute="top" constant="20" id="sBW-Lu-kBm"/>
+                <constraint firstItem="EeN-uo-okz" firstAttribute="centerX" secondItem="F5l-mP-b9o" secondAttribute="centerX" id="cKZ-Sy-txy"/>
+                <constraint firstItem="EeN-uo-okz" firstAttribute="top" secondItem="F5l-mP-b9o" secondAttribute="top" constant="10" id="kPX-ga-7uG"/>
+                <constraint firstItem="OAr-kk-HpY" firstAttribute="top" secondItem="EeN-uo-okz" secondAttribute="bottom" constant="10" id="thm-61-hC8"/>
                 <constraint firstItem="J7f-zy-tMu" firstAttribute="centerY" secondItem="aik-5V-tSc" secondAttribute="centerY" constant="-1" id="xje-Yv-Jiz"/>
                 <constraint firstItem="F5l-mP-b9o" firstAttribute="bottom" secondItem="Yrj-8B-7oQ" secondAttribute="bottom" constant="100" id="zIP-nq-YWP"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="F5l-mP-b9o"/>
+            <point key="canvasLocation" x="53.600000000000001" y="119.1904047976012"/>
         </view>
     </objects>
 </document>

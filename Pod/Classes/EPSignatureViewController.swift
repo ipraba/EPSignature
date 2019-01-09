@@ -18,6 +18,7 @@ open class EPSignatureViewController: UIViewController {
 
     // MARK: - IBOutlets
     
+    @IBOutlet public weak var lblTitle: UILabel!
     @IBOutlet public weak var switchSaveSignature: UISwitch!
     @IBOutlet public weak var lblSignatureSubtitle: UILabel!
     @IBOutlet public weak var lblDefaultSignature: UILabel!
@@ -40,8 +41,8 @@ open class EPSignatureViewController: UIViewController {
         super.viewDidLoad()
 
         let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel, target: self, action: #selector(EPSignatureViewController.onTouchCancelButton))
-        cancelButton.tintColor = tintColor
-        self.navigationItem.leftBarButtonItem = cancelButton
+//        cancelButton.tintColor = tintColor
+//        self.navigationItem.leftBarButtonItem = cancelButton
         
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(EPSignatureViewController.onTouchDoneButton))
         doneButton.tintColor = tintColor
