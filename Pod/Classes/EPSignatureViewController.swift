@@ -45,9 +45,9 @@ open class EPSignatureViewController: UIViewController {
 //        self.navigationItem.leftBarButtonItem = cancelButton
         
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(EPSignatureViewController.onTouchDoneButton))
-        doneButton.tintColor = tintColor
+//        doneButton.tintColor = tintColor
         let clearButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.trash, target: self, action: #selector(EPSignatureViewController.onTouchClearButton))
-        clearButton.tintColor = tintColor
+//        clearButton.tintColor = tintColor
         
         if showsDate {
             let dateFormatter = DateFormatter()
@@ -60,7 +60,7 @@ open class EPSignatureViewController: UIViewController {
         
         if showsSaveSignatureOption {
             let actionButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.action, target:   self, action: #selector(EPSignatureViewController.onTouchActionButton(_:)))
-            actionButton.tintColor = tintColor
+//            actionButton.tintColor = tintColor
             self.navigationItem.rightBarButtonItems = [doneButton, clearButton, actionButton]
             switchSaveSignature.onTintColor = tintColor
         } else {
