@@ -50,7 +50,8 @@ open class EPSignatureViewController: UIViewController {
         
         if showsDate {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd MMMM YYYY"
+            dateFormatter.dateStyle  = DateFormatter.Style.short
+            dateFormatter.timeStyle  = DateFormatter.Style.none
             lblDate.text = dateFormatter.string(from: Date())
         } else {
             lblDate.isHidden = true
@@ -145,4 +146,7 @@ open class EPSignatureViewController: UIViewController {
         signatureView.clear()
     }
     
+    override open func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        signatureView.reposition()
+    }
 }

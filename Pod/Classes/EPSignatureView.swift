@@ -15,13 +15,13 @@ open class EPSignatureView: UIView {
     fileprivate var bezierPoints = [CGPoint](repeating: CGPoint(), count: 5)
     fileprivate var bezierPath = UIBezierPath()
     fileprivate var bezierCounter : Int = 0
-    fileprivate var maxPoint = CGPoint.zero
-    fileprivate var minPoint = CGPoint.zero
     
     // MARK: - Public Vars
     
     open var strokeColor = UIColor.black
-    open var strokeWidth: CGFloat = 2.0
+    open var strokeWidth: CGFloat = 2.0 {
+	    didSet { bezierPath.lineWidth = strokeWidth }
+    }
     open var isSigned: Bool = false
     
     // MARK: - Initializers
@@ -31,7 +31,6 @@ open class EPSignatureView: UIView {
         self.backgroundColor = UIColor.clear
         bezierPath.lineWidth = strokeWidth
         addLongPressGesture()
-        minPoint = CGPoint(x: self.frame.size.width,y: self.frame.size.height)
     }
     
     public override init(frame: CGRect) {
@@ -39,7 +38,6 @@ open class EPSignatureView: UIView {
         self.backgroundColor = UIColor.clear
         bezierPath.lineWidth = strokeWidth
         addLongPressGesture()
-        minPoint = CGPoint(x: self.frame.size.width,y: self.frame.size.height)
     }
     
     override open func draw(_ rect: CGRect) {
@@ -61,7 +59,7 @@ open class EPSignatureView: UIView {
     
     @objc func longPressed(_ gesture: UILongPressGestureRecognizer) {
         let touchPoint = gesture.location(in: self)
-        let endAngle = CGFloat(2.0 * M_PI)
+        let endAngle: CGFloat = .pi * 2.0
         bezierPath.move(to: touchPoint)
         bezierPath.addArc(withCenter: touchPoint, radius: 2, startAngle: 0, endAngle: endAngle, clockwise: true)
         setNeedsDisplay()
@@ -100,21 +98,7 @@ open class EPSignatureView: UIView {
     
     func touchPoint(_ touches: Set<UITouch>) -> CGPoint? {
         if let touch = touches.first {
-            let point = touch.location(in: self)
-            //Track the signature bounding area
-            if point.x > maxPoint.x {
-                maxPoint.x = point.x
-            }
-            if point.y > maxPoint.y {
-                maxPoint.y = point.y
-            }
-            if point.x < minPoint.x {
-                minPoint.x = point.x
-            }
-            if point.y < minPoint.y {
-                minPoint.y = point.y
-            }
-            return point
+            return touch.location(in: self)
         }
         return nil
     }
@@ -126,6 +110,15 @@ open class EPSignatureView: UIView {
     open func clear() {
         isSigned = false
         bezierPath.removeAllPoints()
+        setNeedsDisplay()
+    }
+    
+    /** scales and repositions the path
+     */
+    open func reposition() {
+        var ratio =  min(self.bounds.width / bezierPath.bounds.width, 1)
+        ratio =  min((self.bounds.height - 64) / bezierPath.bounds.height, ratio)
+        bezierPath.apply(CGAffineTransform(scaleX: ratio, y: ratio))
         setNeedsDisplay()
     }
     
@@ -146,7 +139,7 @@ open class EPSignatureView: UIView {
      */
 
     open func getSignatureBoundsInCanvas() -> CGRect {
-        return CGRect(x: minPoint.x, y: minPoint.y, width: maxPoint.x - minPoint.x, height: maxPoint.y - minPoint.y)
+        return bezierPath.bounds
     }
     
     //MARK: Save load signature methods

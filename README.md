@@ -7,7 +7,7 @@
 Signature component for iOS written in Swift
 
 [![Platform](https://img.shields.io/cocoapods/p/EPSignature.svg?style=flat)](http://cocoapods.org/pods/EPSignature)
-[![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![CI Status](https://travis-ci.org/ipraba/EPSignature.svg?branch=master)](https://travis-ci.org/ipraba/EPSignature)
 [![Version](https://img.shields.io/cocoapods/v/EPSignature.svg?style=flat)](https://cocoapods.org/?q=EPsignature)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
