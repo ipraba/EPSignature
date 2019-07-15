@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "EPSignature_Example.app"
-               BlueprintName = "EPSignature_Example"
-               ReferencedContainer = "container:EPSignature.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "EPSignature_Tests.xctest"
-               BlueprintName = "EPSignature_Tests"
-               ReferencedContainer = "container:EPSignature.xcodeproj">
+               BlueprintIdentifier = "19D6D9705482D1B9CB1C3F1D8CC28599"
+               BuildableName = "EPSignature.framework"
+               BlueprintName = "EPSignature"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,17 +35,17 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "EPSignature_Tests.xctest"
                BlueprintName = "EPSignature_Tests"
-               ReferencedContainer = "container:EPSignature.xcodeproj">
+               ReferencedContainer = "container:../EPSignature.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "EPSignature_Example.app"
-            BlueprintName = "EPSignature_Example"
-            ReferencedContainer = "container:EPSignature.xcodeproj">
+            BlueprintIdentifier = "19D6D9705482D1B9CB1C3F1D8CC28599"
+            BuildableName = "EPSignature.framework"
+            BlueprintName = "EPSignature"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "EPSignature_Example.app"
-            BlueprintName = "EPSignature_Example"
-            ReferencedContainer = "container:EPSignature.xcodeproj">
+            BlueprintIdentifier = "19D6D9705482D1B9CB1C3F1D8CC28599"
+            BuildableName = "EPSignature.framework"
+            BlueprintName = "EPSignature"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -94,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "EPSignature_Example.app"
-            BlueprintName = "EPSignature_Example"
-            ReferencedContainer = "container:EPSignature.xcodeproj">
+            BlueprintIdentifier = "19D6D9705482D1B9CB1C3F1D8CC28599"
+            BuildableName = "EPSignature.framework"
+            BlueprintName = "EPSignature"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
