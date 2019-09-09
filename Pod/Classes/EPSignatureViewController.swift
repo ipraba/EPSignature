@@ -30,6 +30,8 @@ open class EPSignatureViewController: UIViewController {
     
     open var showsDate: Bool = true
     open var showsSaveSignatureOption: Bool = true
+    open var alertTitle: String = "Please draw your signature"
+    open var alertMessage: String = "You did not sign"
     open weak var signatureDelegate: EPSignatureDelegate?
     open var subtitleText = "Sign Here"
     open var tintColor = UIColor.defaultTintColor()
@@ -116,7 +118,7 @@ open class EPSignatureViewController: UIViewController {
             signatureDelegate?.epSignature!(self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
             dismiss(animated: true, completion: nil)
         } else {
-            showAlert("You did not sign", andTitle: "Please draw your signature")
+            showAlert(alertMessage, andTitle: alertTitle)
         }
     }
     
