@@ -1,5 +1,5 @@
 language: objective-c  #1
-osx_image: xcode10.1 #2
+osx_image: xcode10.3 #2
 xcode_workspace: Example/EPSignature.xcworkspace #3
 xcode_scheme: EPSignature #4
 xcode_sdk: iphonesimulator10.3 #5
