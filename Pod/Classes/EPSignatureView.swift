@@ -17,8 +17,14 @@ open class EPSignatureView: UIView {
     fileprivate var bezierCounter : Int = 0
     
     // MARK: - Public Vars
+
+    open var strokeColor: UIColor {
+        if #available(iOS 13.0, *) {
+            return UIColor.label
+        }
+        return UIColor.black
+    }
     
-    open var strokeColor = UIColor.black
     open var strokeWidth: CGFloat = 2.0 {
 	    didSet { bezierPath.lineWidth = strokeWidth }
     }
