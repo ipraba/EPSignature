@@ -65,6 +65,10 @@ open class EPSignatureView: UIView {
         setNeedsDisplay()
     }
     
+    open override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return false
+    }
+    
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
         if let currentPoint = touchPoint(touches) {
