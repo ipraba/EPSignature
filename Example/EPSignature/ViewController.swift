@@ -34,5 +34,6 @@ class ViewController: UIViewController, EPSignatureDelegate {
         imgHeightConstraint.constant = boundingRect.size.height
     }
 
+
 }
 

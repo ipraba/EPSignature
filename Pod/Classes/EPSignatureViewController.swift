@@ -12,6 +12,7 @@ import UIKit
 @objc public protocol EPSignatureDelegate {
     @objc optional    func epSignature(_: EPSignatureViewController, didCancel error : NSError)
     @objc optional    func epSignature(_: EPSignatureViewController, didSign signatureImage : UIImage, boundingRect: CGRect)
+    @objc optional    func epSignatureDelete(_: EPSignatureViewController)
 }
 
 open class EPSignatureViewController: UIViewController {
@@ -157,6 +158,7 @@ open class EPSignatureViewController: UIViewController {
 
     @objc func onTouchClearButton() {
         signatureView.clear()
+        signatureDelegate?.epSignatureDelete?(self)
     }
     
     override open func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
