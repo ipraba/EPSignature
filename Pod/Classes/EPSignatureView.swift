@@ -144,26 +144,26 @@ open class EPSignatureView: UIView {
     
     //MARK: Save load signature methods
     
-    open func saveSignature(_ localPath: String) {
-        if isSigned {
-            NSKeyedArchiver.archiveRootObject(bezierPath, toFile: localPath)
-        }
-    }
+//    open func saveSignature(_ localPath: String) {
+//        if isSigned {
+//            NSKeyedArchiver.archiveRootObject(bezierPath, toFile: localPath)
+//        }
+//    }
 
-    open func loadSignature(_ filePath: String) {
-        if let path = getPath(filePath) {
-            isSigned = true
-            bezierPath = path
-            setNeedsDisplay()
-        }
-    }
+//    open func loadSignature(_ filePath: String) {
+//        if let path = getPath(filePath) {
+//            isSigned = true
+//            bezierPath = path
+//            setNeedsDisplay()
+//        }
+//    }
     
-    fileprivate func getPath(_ filePath: String) -> UIBezierPath? {
-        if FileManager.default.fileExists(atPath: filePath) {
-            return NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? UIBezierPath
-        }
-        return nil
-    }
+//    fileprivate func getPath(_ filePath: String) -> UIBezierPath? {
+//        if FileManager.default.fileExists(atPath: filePath) {
+//            return NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? UIBezierPath
+//        }
+//        return nil
+//    }
     
     func removeSignature() {
         let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
