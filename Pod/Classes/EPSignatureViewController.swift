@@ -92,12 +92,12 @@ open class EPSignatureViewController: UIViewController {
     // MARK: - Button Actions
     
     @objc func onTouchCancelButton() {
-        signatureDelegate?.epSignature!(view:self, didCancel: NSError(domain: "EPSignatureDomain", code: 1, userInfo: [NSLocalizedDescriptionKey:"User not signed"]))
+        signatureDelegate?.epSignature(view:self, didCancel: NSError(domain: "EPSignatureDomain", code: 1, userInfo: [NSLocalizedDescriptionKey:"User not signed"]))
     }
 
     @objc func onTouchDoneButton() {
         if let signature = signatureView.getSignatureAsImage() {
-            signatureDelegate?.epSignature!(view:self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
+            signatureDelegate?.epSignature(view:self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
         } else {
             showAlert(NSLocalizedString("No signature", comment:"No signature"), andTitle:NSLocalizedString("Please sign on the line.", comment:"Please sign on the line.") )
         }
