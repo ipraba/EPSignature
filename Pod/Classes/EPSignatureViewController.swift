@@ -10,8 +10,8 @@ import UIKit
 
     // MARK: - EPSignatureDelegate
 @objc public protocol EPSignatureDelegate {
-    @objc optional    func epSignature(view: EPSignatureViewController, didCancel error : NSError)
-    @objc optional    func epSignature(view: EPSignatureViewController, didSign signatureImage : UIImage, boundingRect: CGRect)
+    @objc  func epSignature(view: EPSignatureViewController, didCancel error : NSError)
+    @objc  func epSignature(view: EPSignatureViewController, didSign signatureImage : UIImage, boundingRect: CGRect)
     @objc optional    func epSignatureDelete(view: EPSignatureViewController)
 }
 
@@ -93,13 +93,6 @@ open class EPSignatureViewController: UIViewController {
     
     @objc func onTouchCancelButton() {
         signatureDelegate?.epSignature!(view:self, didCancel: NSError(domain: "EPSignatureDomain", code: 1, userInfo: [NSLocalizedDescriptionKey:"User not signed"]))
-        if self.navigationController == nil {
-            dismiss(animated: true, completion: nil)
-            
-        }else
-        {
-            self.navigationController?.popViewController(animated: true)
-        }
     }
 
     @objc func onTouchDoneButton() {
