@@ -1,16 +1,16 @@
 PODS:
-  - EPSignature (1.0.4)
+  - EPSignature (1.0.3)
 
 DEPENDENCIES:
   - EPSignature (from `../`)
 
 EXTERNAL SOURCES:
   EPSignature:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  EPSignature: b75b3a6cbe8281e484f5f3c5ee49c3acfce554e0
+  EPSignature: 80b92b29340fe6376e9487ba641abbdd93c6f9eb
 
-PODFILE CHECKSUM: 83a39802a6674c3bada5ab21ea3e15ab65f7b868
+PODFILE CHECKSUM: e81d3e0034b5a106ee13acbb988db367af10b098
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.10.1

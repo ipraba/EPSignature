@@ -68,7 +68,6 @@ open class EPSignatureView: UIView {
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
         if let currentPoint = touchPoint(touches) {
-            isSigned = true
             bezierPoints[0] = currentPoint
             bezierCounter = 0
         }
@@ -81,6 +80,8 @@ open class EPSignatureView: UIView {
 
             //Smoothing is done by Bezier Equations where curves are calculated based on four concurrent  points drawn
             if bezierCounter == 4 {
+                //Moved is signed to here to prevent false positive for single pixel presses
+                isSigned = true
                 bezierPoints[3] = CGPoint(x: (bezierPoints[2].x + bezierPoints[4].x) / 2 , y: (bezierPoints[2].y + bezierPoints[4].y) / 2)
                 bezierPath.move(to: bezierPoints[0])
                 bezierPath.addCurve(to: bezierPoints[3], controlPoint1: bezierPoints[1], controlPoint2: bezierPoints[2])
@@ -140,40 +141,6 @@ open class EPSignatureView: UIView {
 
     open func getSignatureBoundsInCanvas() -> CGRect {
         return bezierPath.bounds
-    }
-    
-    //MARK: Save load signature methods
-    
-//    open func saveSignature(_ localPath: String) {
-//        if isSigned {
-//            NSKeyedArchiver.archiveRootObject(bezierPath, toFile: localPath)
-//        }
-//    }
-
-//    open func loadSignature(_ filePath: String) {
-//        if let path = getPath(filePath) {
-//            isSigned = true
-//            bezierPath = path
-//            setNeedsDisplay()
-//        }
-//    }
-    
-//    fileprivate func getPath(_ filePath: String) -> UIBezierPath? {
-//        if FileManager.default.fileExists(atPath: filePath) {
-//            return NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? UIBezierPath
-//        }
-//        return nil
-//    }
-    
-    func removeSignature() {
-        let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
-        let filePath = (docPath! as NSString).appendingPathComponent("sig.data")
-        do {
-            try FileManager.default.removeItem(atPath: filePath)
-        }
-        catch let error {
-            print(error)
-        }
     }
     
 }

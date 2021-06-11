@@ -20,18 +20,26 @@ class ViewController: UIViewController, EPSignatureDelegate {
         signatureVC.subtitleText = "I agree to the terms and conditions"
         signatureVC.title = "John Doe"
         let nav = UINavigationController(rootViewController: signatureVC)
+        nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true, completion: nil)
     }
 
-    func epSignature(_: EPSignatureViewController, didCancel error : NSError) {
+    func epSignature(view: EPSignatureViewController, didCancel error : NSError) {
         print("User canceled")
+        view.dismiss(animated: true, completion: nil)
+
     }
     
-    func epSignature(_: EPSignatureViewController, didSign signatureImage : UIImage, boundingRect: CGRect) {
+    func epSignature(view: EPSignatureViewController, didSign signatureImage : UIImage, boundingRect: CGRect) {
         print(signatureImage)
         imgViewSignature.image = signatureImage
         imgWidthConstraint.constant = boundingRect.size.width
         imgHeightConstraint.constant = boundingRect.size.height
+        view.dismiss(animated: true, completion: nil)
+    }
+    
+    func epSignatureDelete(view: EPSignatureViewController) {
+        imgViewSignature.image = nil
     }
 
 
