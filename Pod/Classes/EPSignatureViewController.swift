@@ -11,8 +11,11 @@ import UIKit
     // MARK: - EPSignatureDelegate
 @objc public protocol EPSignatureDelegate {
     @objc  func epSignature(view: EPSignatureViewController, didCancel error : NSError)
-    @objc  func epSignature(view: EPSignatureViewController, didSign signatureImage : UIImage, boundingRect: CGRect)
+    @objc optional func epSignature(view: EPSignatureViewController, didSign signatureImage : UIImage, boundingRect: CGRect)
     @objc optional    func epSignatureDelete(view: EPSignatureViewController)
+   
+    @objc  optional func epSignatureAsBeizerPath(view: EPSignatureViewController, didSign path : UIBezierPath, boundingRect: CGRect)
+    
 }
 
 open class EPSignatureViewController: UIViewController {
@@ -97,7 +100,9 @@ open class EPSignatureViewController: UIViewController {
 
     @objc func onTouchDoneButton() {
         if let signature = signatureView.getSignatureAsImage() {
-            signatureDelegate?.epSignature(view:self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
+            signatureDelegate?.epSignature?(view:self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
+            
+            signatureDelegate?.epSignatureAsBeizerPath?(view: self, didSign: signatureView.bezierPath, boundingRect: signatureView.getSignatureBoundsInCanvas())
         } else {
             showAlert(NSLocalizedString("No signature", comment:"No signature"), andTitle:NSLocalizedString("Please sign on the line.", comment:"Please sign on the line.") )
         }

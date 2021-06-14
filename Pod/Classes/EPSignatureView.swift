@@ -13,7 +13,7 @@ open class EPSignatureView: UIView {
     // MARK: - Private Vars
     
     fileprivate var bezierPoints = [CGPoint](repeating: CGPoint(), count: 5)
-    fileprivate var bezierPath = UIBezierPath()
+    open var bezierPath = UIBezierPath()
     fileprivate var bezierCounter : Int = 0
     
     // MARK: - Public Vars
