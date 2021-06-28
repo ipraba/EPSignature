@@ -31,7 +31,7 @@ open class EPSignatureViewController: UIViewController {
     @objc open var showsDate: Bool = true
     @objc open var showsSaveSignatureOption: Bool = true
     @objc open weak var signatureDelegate: EPSignatureDelegate?
-    @objc open var subtitleText = "Sign Here"
+    @objc open var subtitleText = NSLocalizedString("Sign Here", comment: "")
     @objc open var tintColor = UIColor.defaultTintColor()
 
     // MARK: - Life cycle methods
@@ -116,25 +116,25 @@ open class EPSignatureViewController: UIViewController {
             signatureDelegate?.epSignature!(self, didSign: signature, boundingRect: signatureView.getSignatureBoundsInCanvas())
             dismiss(animated: true, completion: nil)
         } else {
-            showAlert("You did not sign", andTitle: "Please draw your signature")
+            showAlert(NSLocalizedString("You did not sign", comment: "Alert title"), andTitle: NSLocalizedString("Please draw your signature", comment: "Alert message"))
         }
     }
     
     @objc func onTouchActionButton(_ barButton: UIBarButtonItem) {
-        let action = UIAlertController(title: "Action", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+        let action = UIAlertController(title: NSLocalizedString("Action", comment: "Alert title"), message: "", preferredStyle: UIAlertController.Style.actionSheet)
         action.view.tintColor = tintColor
         
-        action.addAction(UIAlertAction(title: "Load default signature", style: UIAlertAction.Style.default, handler: { action in
+        action.addAction(UIAlertAction(title: NSLocalizedString("Load default signature", comment: "Button title"), style: UIAlertAction.Style.default, handler: { action in
             let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
             let filePath = (docPath! as NSString).appendingPathComponent("sig.data")
             self.signatureView.loadSignature(filePath)
         }))
         
-        action.addAction(UIAlertAction(title: "Delete default signature", style: UIAlertAction.Style.destructive, handler: { action in
+        action.addAction(UIAlertAction(title: NSLocalizedString("Delete default signature", comment: "Buttont title"), style: UIAlertAction.Style.destructive, handler: { action in
             self.signatureView.removeSignature()
         }))
         
-        action.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        action.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Button title"), style: UIAlertAction.Style.cancel, handler: nil))
         
         if let popOver = action.popoverPresentationController {
             popOver.barButtonItem = barButton
