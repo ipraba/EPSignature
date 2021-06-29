@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EPSignatureViewController" customModule="EPSignature" customModuleProvider="target">
+            <connections>
+                <outlet property="lblDate" destination="axD-zL-F02" id="wTq-kl-F6R"/>
+                <outlet property="lblDefaultSignature" destination="aik-5V-tSc" id="I3Z-k5-p5s"/>
+                <outlet property="lblSignatureSubtitle" destination="rdS-ZH-7LX" id="JNs-Ic-dDV"/>
+                <outlet property="lblX" destination="MkH-Jy-I8l" id="LOa-wr-8Mx"/>
+                <outlet property="signatureView" destination="OAr-kk-HpY" id="4ZM-Go-wnK"/>
+                <outlet property="switchSaveSignature" destination="J7f-zy-tMu" id="KAn-zS-2zW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewMargin" destination="Yrj-8B-7oQ" id="0gX-Sw-qAm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAr-kk-HpY" customClass="EPSignatureView" customModule="EPSignature" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save to default signature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aik-5V-tSc">
+                    <rect key="frame" x="104" y="613" width="165" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="RVR-PA-nbo"/>
+                        <constraint firstAttribute="width" constant="165" id="lKF-66-rNd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkH-Jy-I8l">
+                    <rect key="frame" x="15" y="541" width="20" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="fkM-wc-mzP"/>
+                        <constraint firstAttribute="width" constant="20" id="qBh-KN-NXm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yrj-8B-7oQ">
+                    <rect key="frame" x="15" y="565" width="345" height="2"/>
+                    <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="t0X-Mk-zhu"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdS-ZH-7LX">
+                    <rect key="frame" x="20" y="582" width="335" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="4kW-fB-aHl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.78543893909999996" green="0.1638312089" blue="0.099763569080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 December 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axD-zL-F02">
+                    <rect key="frame" x="238" y="40" width="122" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J7f-zy-tMu">
+                    <rect key="frame" x="279" y="611" width="51" height="31"/>
+                    <color key="onTintColor" red="0.82745098039999998" green="0.3294117647" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </switch>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Yrj-8B-7oQ" firstAttribute="leading" secondItem="F5l-mP-b9o" secondAttribute="leading" constant="15" id="5PA-ug-Sg6"/>
+                <constraint firstItem="MkH-Jy-I8l" firstAttribute="leading" secondItem="Yrj-8B-7oQ" secondAttribute="leading" id="64f-F5-UUL"/>
+                <constraint firstItem="F5l-mP-b9o" firstAttribute="trailing" secondItem="axD-zL-F02" secondAttribute="trailing" constant="15" id="9Pq-L2-SZk"/>
+                <constraint firstItem="aik-5V-tSc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-1" id="GlS-Yf-S40"/>
+                <constraint firstItem="F5l-mP-b9o" firstAttribute="trailing" secondItem="rdS-ZH-7LX" secondAttribute="trailing" constant="20" id="JOv-bb-Yrx"/>
+                <constraint firstItem="Yrj-8B-7oQ" firstAttribute="top" secondItem="MkH-Jy-I8l" secondAttribute="bottom" constant="3" id="K58-Xq-qgO"/>
+                <constraint firstItem="rdS-ZH-7LX" firstAttribute="leading" secondItem="F5l-mP-b9o" secondAttribute="leading" constant="20" id="L7L-MI-kvu"/>
+                <constraint firstItem="aik-5V-tSc" firstAttribute="top" secondItem="rdS-ZH-7LX" secondAttribute="bottom" constant="10" id="MgR-XF-1Bq"/>
+                <constraint firstItem="F5l-mP-b9o" firstAttribute="trailing" secondItem="Yrj-8B-7oQ" secondAttribute="trailing" constant="15" id="Oc8-OS-bPq"/>
+                <constraint firstItem="OAr-kk-HpY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="R89-jA-Ieb"/>
+                <constraint firstItem="rdS-ZH-7LX" firstAttribute="top" secondItem="Yrj-8B-7oQ" secondAttribute="bottom" constant="15" id="REi-Qo-wZH"/>
+                <constraint firstAttribute="trailing" secondItem="OAr-kk-HpY" secondAttribute="trailing" id="Wcg-X5-9zF"/>
+                <constraint firstAttribute="bottom" secondItem="OAr-kk-HpY" secondAttribute="bottom" id="WtB-mL-Yei"/>
+                <constraint firstItem="J7f-zy-tMu" firstAttribute="leading" secondItem="aik-5V-tSc" secondAttribute="trailing" constant="10" id="ZAL-TA-pyS"/>
+                <constraint firstItem="OAr-kk-HpY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hnC-tQ-bvr"/>
+                <constraint firstItem="axD-zL-F02" firstAttribute="top" secondItem="F5l-mP-b9o" secondAttribute="top" constant="20" id="sBW-Lu-kBm"/>
+                <constraint firstItem="J7f-zy-tMu" firstAttribute="centerY" secondItem="aik-5V-tSc" secondAttribute="centerY" constant="-1" id="xje-Yv-Jiz"/>
+                <constraint firstItem="F5l-mP-b9o" firstAttribute="bottom" secondItem="Yrj-8B-7oQ" secondAttribute="bottom" constant="100" id="zIP-nq-YWP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="F5l-mP-b9o"/>
+        </view>
+    </objects>
+</document>
