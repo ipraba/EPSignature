@@ -23,5 +23,5 @@ DESC
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*.swift'
-  s.resources        = ["Pod/Classes/EPSignatureViewController.xib"]
+  s.resources        = ["Pod/Assets/EPSignatureViewController.xib"]
 end
