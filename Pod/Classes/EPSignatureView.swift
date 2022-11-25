@@ -17,8 +17,14 @@ open class EPSignatureView: UIView {
     fileprivate var bezierCounter : Int = 0
     
     // MARK: - Public Vars
+
+    open var strokeColor: UIColor {
+        if #available(iOS 13.0, *) {
+            return UIColor.label
+        }
+        return UIColor.black
+    }
     
-    open var strokeColor = UIColor.black
     open var strokeWidth: CGFloat = 2.0 {
 	    didSet { bezierPath.lineWidth = strokeWidth }
     }
@@ -116,10 +122,17 @@ open class EPSignatureView: UIView {
     /** scales and repositions the path
      */
     open func reposition() {
-        var ratio =  min(self.bounds.width / bezierPath.bounds.width, 1)
-        ratio =  min((self.bounds.height - 64) / bezierPath.bounds.height, ratio)
-        bezierPath.apply(CGAffineTransform(scaleX: ratio, y: ratio))
-        setNeedsDisplay()
+        if !bezierPath.isEmpty {
+            var ratio =  min(self.bounds.width / bezierPath.bounds.width, 1)
+            ratio =  min((self.bounds.height - 64) / bezierPath.bounds.height, ratio)
+            bezierPath.apply(CGAffineTransform(scaleX: ratio, y: ratio))
+            let midX = (self.bounds.width - bezierPath.bounds.width) / 2
+            let midY = (self.bounds.height - bezierPath.bounds.height) / 2
+            let translateX = -bezierPath.bounds.origin.x + midX
+            let translateY = -bezierPath.bounds.origin.y + midY
+            bezierPath.apply(CGAffineTransform(translationX: translateX, y: translateY))
+            setNeedsDisplay()
+        }
     }
     
     /** Returns the drawn path as Image. Adding subview to this view will also get returned in this image.
@@ -137,7 +150,7 @@ open class EPSignatureView: UIView {
     
     /** Returns the rect of signature image drawn in the canvas. This can very very useful in croping out the unwanted empty areas in the signature image returned.
      */
-
+    
     open func getSignatureBoundsInCanvas() -> CGRect {
         return bezierPath.bounds
     }
@@ -149,7 +162,7 @@ open class EPSignatureView: UIView {
             NSKeyedArchiver.archiveRootObject(bezierPath, toFile: localPath)
         }
     }
-
+    
     open func loadSignature(_ filePath: String) {
         if let path = getPath(filePath) {
             isSigned = true
