@@ -35,6 +35,7 @@ open class EPSignatureViewController: UIViewController {
     open weak var signatureDelegate: EPSignatureDelegate?
     open var subtitleText = "Sign Here"
     open var tintColor = UIColor.defaultTintColor()
+    open var statusBarStyle: UIStatusBarStyle?
 
     // MARK: - Life cycle methods
     
@@ -73,6 +74,10 @@ open class EPSignatureViewController: UIViewController {
         
         lblSignatureSubtitle.text = subtitleText
         switchSaveSignature.setOn(false, animated: true)
+    }
+
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return statusBarStyle ?? .default
     }
     
     override open func didReceiveMemoryWarning() {
