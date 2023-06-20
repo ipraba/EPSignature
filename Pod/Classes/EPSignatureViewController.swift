@@ -65,7 +65,8 @@ open class EPSignatureViewController: UIViewController {
             self.navigationItem.rightBarButtonItems = [doneButton, clearButton, actionButton]
             switchSaveSignature.onTintColor = tintColor
         } else {
-            self.navigationItem.rightBarButtonItems = [doneButton, clearButton]
+            self.navigationItem.rightBarButtonItems = [doneButton]
+            self.navigationItem.leftBarButtonItems = [cancelButton, clearButton]
             lblDefaultSignature.isHidden = true
             switchSaveSignature.isHidden = true
         }
